@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="fetch1234语法: fetch(参数) .then(完成的回调函数) .catch(失败的回调函数) get 请求  默认get请求12345678fetch(url?key1=val1&amp;amp;key2=val2&amp;amp;...)            .then((response) =&amp;gt; response.json())      //将Promise对象转换成json对象">
+<meta name="description" content="fetchfetch使用了PromisePromise 对象代表一个异步操作,有三种状态:Pending(进行中) Resolved(已完成) Rejected(已失效) 1234语法: fetch(参数) .then(完成的回调函数) .catch(失败的回调函数) get 请求  默认get请求12345678fetch(url?key1=val1&amp;amp;key2=val2&amp;amp;...)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="fetch">
 <meta property="og:url" content="http://yoursite.com/2018/09/28/fetch/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="fetch1234语法: fetch(参数) .then(完成的回调函数) .catch(失败的回调函数) get 请求  默认get请求12345678fetch(url?key1=val1&amp;amp;key2=val2&amp;amp;...)            .then((response) =&amp;gt; response.json())      //将Promise对象转换成json对象">
+<meta property="og:description" content="fetchfetch使用了PromisePromise 对象代表一个异步操作,有三种状态:Pending(进行中) Resolved(已完成) Rejected(已失效) 1234语法: fetch(参数) .then(完成的回调函数) .catch(失败的回调函数) get 请求  默认get请求12345678fetch(url?key1=val1&amp;amp;key2=val2&amp;amp;...)">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-29T02:53:39.331Z">
+<meta property="og:updated_time" content="2018-09-30T06:04:52.715Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="fetch">
-<meta name="twitter:description" content="fetch1234语法: fetch(参数) .then(完成的回调函数) .catch(失败的回调函数) get 请求  默认get请求12345678fetch(url?key1=val1&amp;amp;key2=val2&amp;amp;...)            .then((response) =&amp;gt; response.json())      //将Promise对象转换成json对象">
+<meta name="twitter:description" content="fetchfetch使用了PromisePromise 对象代表一个异步操作,有三种状态:Pending(进行中) Resolved(已完成) Rejected(已失效) 1234语法: fetch(参数) .then(完成的回调函数) .catch(失败的回调函数) get 请求  默认get请求12345678fetch(url?key1=val1&amp;amp;key2=val2&amp;amp;...)">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -293,7 +293,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a>fetch</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">语法:</span><br><span class="line"> fetch(参数)</span><br><span class="line"> .then(完成的回调函数)</span><br><span class="line"> .catch(失败的回调函数)</span><br></pre></td></tr></table></figure>
+        <h1 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a>fetch</h1><p>fetch使用了Promise<br>Promise 对象代表一个异步操作,有三种状态:Pending(进行中) Resolved(已完成) Rejected(已失效)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">语法:</span><br><span class="line"> fetch(参数)</span><br><span class="line"> .then(完成的回调函数)</span><br><span class="line"> .catch(失败的回调函数)</span><br></pre></td></tr></table></figure>
 <h3 id="get-请求"><a href="#get-请求" class="headerlink" title="get 请求"></a>get 请求</h3><p>  默认get请求<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fetch(url?key1=val1&amp;key2=val2&amp;...)</span><br><span class="line">            .then((response) =&gt; response.json())      //将Promise对象转换成json对象</span><br><span class="line">            .then((json) =&gt; &#123;</span><br><span class="line">                //处理返回值</span><br><span class="line">            &#125;)</span><br><span class="line">            .catch((error) =&gt; &#123;</span><br><span class="line">                //异常处理</span><br><span class="line">       	   &#125;)</span><br></pre></td></tr></table></figure></p>
 <h3 id="post-请求"><a href="#post-请求" class="headerlink" title="post 请求"></a>post 请求</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">fetch(url,&#123;</span><br><span class="line">          method: &apos;POST&apos;,</span><br><span class="line">          headers: &#123;</span><br><span class="line">             &quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;</span><br><span class="line">          &#125;,</span><br><span class="line">          body: key1=val1&amp;key2=val2&amp;...</span><br><span class="line">        &#125;)</span><br><span class="line">        .then((response) =&gt; &#123;</span><br><span class="line">          return response.json();</span><br><span class="line">        &#125;)</span><br><span class="line">        .then((info) =&gt; &#123;</span><br><span class="line">          //处理返回值</span><br><span class="line">        &#125;)</span><br><span class="line">        .catch((error) =&gt; &#123;</span><br><span class="line">          //异常处理</span><br><span class="line">        &#125;)</span><br></pre></td></tr></table></figure>
 
@@ -307,7 +308,7 @@
         <p><span>本文标题:</span><a href="/2018/09/28/fetch/">fetch</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Lemon</a></p>
         <p><span>发布时间:</span>2018-09-28, 11:16:52</p>
-        <p><span>最后更新:</span>2018-09-29, 10:53:39</p>
+        <p><span>最后更新:</span>2018-09-30, 14:04:52</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/09/28/fetch/" title="fetch">http://yoursite.com/2018/09/28/fetch/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/09/28/fetch/　　作者: Lemon" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
