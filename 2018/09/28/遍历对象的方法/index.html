@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="fetchfetch使用了PromisePromise 对象代表一个异步操作,有三种状态:Pending(进行中) Resolved(已完成) Rejected(已失效) 1234语法: fetch(参数) .then(完成的回调函数) .catch(失败的回调函数) get 请求  默认get请求12345678fetch(url?key1=val1&amp;amp;key2=val2&amp;amp;...)">
+<meta name="description" content="遍历对象的方法1. for … in 语句1for (let variable in object)  &amp;#123; ... &amp;#125; 1234var obj = &amp;#123;a: 1, b: 2&amp;#125;;for (let i in obj) &amp;#123;  console.log(&quot;key:&quot; + i + &quot;, value:&quot; + obj[i]);&amp;#125; 数组Array的遍历，i则">
 <meta property="og:type" content="article">
-<meta property="og:title" content="fetch">
-<meta property="og:url" content="http://yoursite.com/2018/09/28/fetch/index.html">
+<meta property="og:title" content="遍历对象的方法">
+<meta property="og:url" content="http://yoursite.com/2018/09/28/遍历对象的方法/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="fetchfetch使用了PromisePromise 对象代表一个异步操作,有三种状态:Pending(进行中) Resolved(已完成) Rejected(已失效) 1234语法: fetch(参数) .then(完成的回调函数) .catch(失败的回调函数) get 请求  默认get请求12345678fetch(url?key1=val1&amp;amp;key2=val2&amp;amp;...)">
+<meta property="og:description" content="遍历对象的方法1. for … in 语句1for (let variable in object)  &amp;#123; ... &amp;#125; 1234var obj = &amp;#123;a: 1, b: 2&amp;#125;;for (let i in obj) &amp;#123;  console.log(&quot;key:&quot; + i + &quot;, value:&quot; + obj[i]);&amp;#125; 数组Array的遍历，i则">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-30T06:05:47.063Z">
+<meta property="og:updated_time" content="2018-10-17T04:33:35.404Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="fetch">
-<meta name="twitter:description" content="fetchfetch使用了PromisePromise 对象代表一个异步操作,有三种状态:Pending(进行中) Resolved(已完成) Rejected(已失效) 1234语法: fetch(参数) .then(完成的回调函数) .catch(失败的回调函数) get 请求  默认get请求12345678fetch(url?key1=val1&amp;amp;key2=val2&amp;amp;...)">
+<meta name="twitter:title" content="遍历对象的方法">
+<meta name="twitter:description" content="遍历对象的方法1. for … in 语句1for (let variable in object)  &amp;#123; ... &amp;#125; 1234var obj = &amp;#123;a: 1, b: 2&amp;#125;;for (let i in obj) &amp;#123;  console.log(&quot;key:&quot; + i + &quot;, value:&quot; + obj[i]);&amp;#125; 数组Array的遍历，i则">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>fetch | Hexo</title>
+<title>遍历对象的方法 | Hexo</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -257,10 +257,10 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-fetch" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-遍历对象的方法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/09/28/fetch/" class="article-date">
+      <a href="/2018/09/28/遍历对象的方法/" class="article-date">
       <time datetime="2018-09-28T03:16:52.000Z" itemprop="datePublished">2018-09-28</time>
 </a>
 
@@ -276,7 +276,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      fetch
+      遍历对象的方法
     </h1>
   
 
@@ -293,10 +293,9 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a>fetch</h1><p>fetch使用了Promise<br>Promise 对象代表一个异步操作,有三种状态:Pending(进行中) Resolved(已完成) Rejected(已失效)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">语法:</span><br><span class="line"> fetch(参数)</span><br><span class="line"> .then(完成的回调函数)</span><br><span class="line"> .catch(失败的回调函数)</span><br></pre></td></tr></table></figure>
-<h3 id="get-请求"><a href="#get-请求" class="headerlink" title="get 请求"></a>get 请求</h3><p>  默认get请求<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fetch(url?key1=val1&amp;key2=val2&amp;...)</span><br><span class="line">            .then((response) =&gt; response.json())      //将Promise对象转换成json对象</span><br><span class="line">            .then((json) =&gt; &#123;</span><br><span class="line">                //处理返回值</span><br><span class="line">            &#125;)</span><br><span class="line">            .catch((error) =&gt; &#123;</span><br><span class="line">                //异常处理</span><br><span class="line">       	   &#125;)</span><br></pre></td></tr></table></figure></p>
-<h3 id="post-请求"><a href="#post-请求" class="headerlink" title="post 请求"></a>post 请求</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">fetch(url,&#123;</span><br><span class="line">          method: &apos;POST&apos;,</span><br><span class="line">          headers: &#123;</span><br><span class="line">             &quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;</span><br><span class="line">          &#125;,</span><br><span class="line">          body: key1=val1&amp;key2=val2&amp;...</span><br><span class="line">        &#125;)</span><br><span class="line">        .then((response) =&gt; &#123;</span><br><span class="line">          return response.json();</span><br><span class="line">        &#125;)</span><br><span class="line">        .then((info) =&gt; &#123;</span><br><span class="line">          //处理返回值</span><br><span class="line">        &#125;)</span><br><span class="line">        .catch((error) =&gt; &#123;</span><br><span class="line">          //异常处理</span><br><span class="line">        &#125;)</span><br></pre></td></tr></table></figure>
+        <h1 id="遍历对象的方法"><a href="#遍历对象的方法" class="headerlink" title="遍历对象的方法"></a>遍历对象的方法</h1><h5 id="1-for-…-in-语句"><a href="#1-for-…-in-语句" class="headerlink" title="1. for … in 语句"></a>1. for … in 语句</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for (let variable in object)  &#123; ... &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> obj) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"key:"</span> + i + <span class="string">", value:"</span> + obj[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>数组Array的遍历，i则为数字</p>
 
       
     </div>
@@ -305,13 +304,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/09/28/fetch/">fetch</a></p>
+        <p><span>本文标题:</span><a href="/2018/09/28/遍历对象的方法/">遍历对象的方法</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Lemon</a></p>
         <p><span>发布时间:</span>2018-09-28, 11:16:52</p>
-        <p><span>最后更新:</span>2018-09-30, 14:05:47</p>
+        <p><span>最后更新:</span>2018-10-17, 12:33:35</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/09/28/fetch/" title="fetch">http://yoursite.com/2018/09/28/fetch/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/09/28/fetch/　　作者: Lemon" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/09/28/遍历对象的方法/" title="遍历对象的方法">http://yoursite.com/2018/09/28/遍历对象的方法/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/09/28/遍历对象的方法/　　作者: Lemon" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -324,15 +323,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/09/28/Error/">
-                    Maximum call stack size exceeded at String.split
+                <a href="/2018/09/28/fetch/">
+                    fetch
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/09/28/遍历对象的方法/">
-                    遍历对象的方法
+                <a href="/2018/09/28/axios/axios/">
+                    Axios
                 </a>
             </div>
         
@@ -344,7 +343,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#fetch"><span class="toc-number">1.</span> <span class="toc-text">fetch</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#get-请求"><span class="toc-number">1.0.1.</span> <span class="toc-text">get 请求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#post-请求"><span class="toc-number">1.0.2.</span> <span class="toc-text">post 请求</span></a></li></ol></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#遍历对象的方法"><span class="toc-number">1.</span> <span class="toc-text">遍历对象的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-for-…-in-语句"><span class="toc-number">1.0.0.0.1.</span> <span class="toc-text">1. for … in 语句</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
         
     </div>
     <style>
@@ -380,7 +379,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"fetch　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"遍历对象的方法　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -400,7 +399,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/09/28/Error/" title="上一篇: Maximum call stack size exceeded at String.split">
+            <a href="/2018/09/28/fetch/" title="上一篇: fetch">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -408,7 +407,7 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/09/28/遍历对象的方法/" title="下一篇: 遍历对象的方法">
+            <a href="/2018/09/28/axios/axios/" title="下一篇: Axios">
                 <i class="fa fa-angle-right"></i>
             </a>
         
