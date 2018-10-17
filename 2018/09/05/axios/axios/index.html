@@ -17,15 +17,15 @@
 
 <meta name="description" content="#Axios Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。 1. GET请求1234567891011121314151617181920axios.get(&apos;/user?ID=12345&apos;)  .then(function (response) &amp;#123;    console.log(response);  &amp;#125;)  .catch(">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="Axios">
 <meta property="og:url" content="http://yoursite.com/2018/09/05/axios/axios/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="#Axios Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。 1. GET请求1234567891011121314151617181920axios.get(&apos;/user?ID=12345&apos;)  .then(function (response) &amp;#123;    console.log(response);  &amp;#125;)  .catch(">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/Users/renyan/myNotes/axios/imgs/axios.png">
-<meta property="og:updated_time" content="2018-10-15T03:08:33.623Z">
+<meta property="og:updated_time" content="2018-10-17T04:35:42.758Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Axios">
 <meta name="twitter:description" content="#Axios Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。 1. GET请求1234567891011121314151617181920axios.get(&apos;/user?ID=12345&apos;)  .then(function (response) &amp;#123;    console.log(response);  &amp;#125;)  .catch(">
 <meta name="twitter:image" content="http://yoursite.com/Users/renyan/myNotes/axios/imgs/axios.png">
 
@@ -59,7 +59,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Hexo</title>
+<title>Axios | Hexo</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -274,6 +274,24 @@
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Axios
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
           
@@ -281,14 +299,11 @@
 <p>Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。</p>
 <h4 id="1-GET请求"><a href="#1-GET请求" class="headerlink" title="1. GET请求"></a>1. GET请求</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">axios.get(<span class="string">'/user?ID=12345'</span>)</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(response);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(error);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 或</span></span><br><span class="line">axios.get(<span class="string">'/user'</span>, &#123;</span><br><span class="line">    params: &#123;</span><br><span class="line">      ID: <span class="number">12345</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(response);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(error);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
 <h4 id="2-POST请求"><a href="#2-POST请求" class="headerlink" title="2. POST请求"></a>2. POST请求</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">axios.post(<span class="string">'/user'</span>, &#123;</span><br><span class="line">    firstName: <span class="string">'Fred'</span>,</span><br><span class="line">    lastName: <span class="string">'Flintstone'</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(response);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(error);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
-<p>####3. 执行多个并发请求</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getUserAccount</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> axios.get(<span class="string">'/user/12345'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getUserPermissions</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> axios.get(<span class="string">'/user/12345/permissions'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">axios.all([getUserAccount(), getUserPermissions()])</span><br><span class="line">  .then(axios.spread(<span class="function"><span class="keyword">function</span> (<span class="params">acct, perms</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 两个请求现在都执行完成</span></span><br><span class="line">  &#125;));</span><br></pre></td></tr></table></figure>
-<p>####4. axios API</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 发送 POST 请求</span></span><br><span class="line">axios(&#123;</span><br><span class="line">  method: <span class="string">'post'</span>,</span><br><span class="line">  url: <span class="string">'/user/12345'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    firstName: <span class="string">'Fred'</span>,</span><br><span class="line">    lastName: <span class="string">'Flintstone'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h4 id="3-执行多个并发请求"><a href="#3-执行多个并发请求" class="headerlink" title="3. 执行多个并发请求"></a>3. 执行多个并发请求</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getUserAccount</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> axios.get(<span class="string">'/user/12345'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getUserPermissions</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> axios.get(<span class="string">'/user/12345/permissions'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">axios.all([getUserAccount(), getUserPermissions()])</span><br><span class="line">  .then(axios.spread(<span class="function"><span class="keyword">function</span> (<span class="params">acct, perms</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 两个请求现在都执行完成</span></span><br><span class="line">  &#125;));</span><br></pre></td></tr></table></figure>
+<h4 id="4-axios-API"><a href="#4-axios-API" class="headerlink" title="4. axios API"></a>4. axios API</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 发送 POST 请求</span></span><br><span class="line">axios(&#123;</span><br><span class="line">  method: <span class="string">'post'</span>,</span><br><span class="line">  url: <span class="string">'/user/12345'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    firstName: <span class="string">'Fred'</span>,</span><br><span class="line">    lastName: <span class="string">'Flintstone'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 发送 GET 请求（默认的方法）</span></span><br><span class="line">axios(<span class="string">'/user/12345'</span>);</span><br></pre></td></tr></table></figure>
-<p>####5. 关于返回值</p>
-<p>返回的是一个 data 对象，而不是直接返回所需的 data 数据。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">axios.get(<span class="string">'http://localhost:8080/todos/getDataAll'</span>).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">	<span class="built_in">console</span>.log(res);	</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="5-关于返回值"><a href="#5-关于返回值" class="headerlink" title="5. 关于返回值"></a>5. 关于返回值</h4><p>返回的是一个 data 对象，而不是直接返回所需的 data 数据。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">axios.get(<span class="string">'http://localhost:8080/todos/getDataAll'</span>).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">	<span class="built_in">console</span>.log(res);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>返回值：</p>
 <p><img src="/Users/renyan/myNotes/axios/imgs/axios.png" alt=""></p>
 
@@ -299,12 +314,12 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/09/05/axios/axios/"></a></p>
+        <p><span>本文标题:</span><a href="/2018/09/05/axios/axios/">Axios</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Lemon</a></p>
         <p><span>发布时间:</span>2018-09-05, 09:20:59</p>
-        <p><span>最后更新:</span>2018-10-15, 11:08:33</p>
+        <p><span>最后更新:</span>2018-10-17, 12:35:42</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/09/05/axios/axios/" title="">http://yoursite.com/2018/09/05/axios/axios/</a>
+            <span>原始链接:</span><a class="post-url" href="/2018/09/05/axios/axios/" title="Axios">http://yoursite.com/2018/09/05/axios/axios/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/09/05/axios/axios/　　作者: Lemon" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -318,8 +333,8 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/09/28/hello-world/">
-                    
+                <a href="/2018/09/28/fetch/">
+                    fetch
                 </a>
             </div>
         
@@ -332,7 +347,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-GET请求"><span class="toc-number">1.</span> <span class="toc-text">1. GET请求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-POST请求"><span class="toc-number">2.</span> <span class="toc-text">2. POST请求</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-GET请求"><span class="toc-number">1.</span> <span class="toc-text">1. GET请求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-POST请求"><span class="toc-number">2.</span> <span class="toc-text">2. POST请求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-执行多个并发请求"><span class="toc-number">3.</span> <span class="toc-text">3. 执行多个并发请求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-axios-API"><span class="toc-number">4.</span> <span class="toc-text">4. axios API</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-关于返回值"><span class="toc-number">5.</span> <span class="toc-text">5. 关于返回值</span></a></li></ol>
         
     </div>
     <style>
@@ -368,7 +383,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Axios　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -388,7 +403,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/09/28/hello-world/" title="上一篇: ">
+            <a href="/2018/09/28/fetch/" title="上一篇: fetch">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -400,7 +415,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/10/12/Error/">Error</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/11/遍历对象的方法/">遍历对象的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/28/fetch/">fetch</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/28/hello-world/">hello-world</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/05/axios/axios/">axios/axios</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/10/12/Error/">Maximum call stack size exceeded at String.split</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/11/遍历对象的方法/">遍历对象的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/28/fetch/">fetch</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/05/axios/axios/">Axios</a></li></ul>
 
 
 
