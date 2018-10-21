@@ -260,6 +260,93 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-Promise" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/10/21/Promise/" class="article-date">
+      <time datetime="2018-10-21T03:11:11.000Z" itemprop="datePublished">2018-10-21</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/21/Promise/">Promise</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h1><p>Promise  解决问题—回调地狱（异步操作层层嵌套）</p>
+<ul>
+<li><p>是一个构造函数</p>
+</li>
+<li><p>参数类型是函数</p>
+</li>
+<li><p>有两个参数(resolve, reject)，参数类型都是函数</p>
+</li>
+<li><p>如果异步失败，调用 reject()，如果异步操作成功，调用resolve()</p>
+</li>
+<li><p>参数是一个容器</p>
+<p>​</p>
+</li>
+</ul>
+<ul>
+<li><p>then()方法支持链式语法，</p>
+<pre><code>有两个参数，类型都是函数
+如果异步失败，调用参数2，如果异步操作成功，调用参数1
+</code></pre><p>   ​</p>
+</li>
+</ul>
+<ul>
+<li>异步编程<ul>
+<li>Promise</li>
+<li>async和await</li>
+<li>回调函数</li>
+</ul>
+</li>
+</ul>
+<p>代码： <code>Promise.js</code> 读取  <code>datas</code> 文件夹下的 <code>a.txt</code>  <code>b.txt</code>  <code>c.txt</code> 文件内容</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> p1 = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">  fs.readFile(<span class="string">'./datas/a.txt'</span>, <span class="string">'utf8'</span>, (err, data) =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">      reject();</span><br><span class="line">    &#125;</span><br><span class="line">    resolve(data);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> p2 = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">  fs.readFile(<span class="string">'./datas/b.txt'</span>, <span class="string">'utf8'</span>, (err, data) =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">      reject();</span><br><span class="line">    &#125;</span><br><span class="line">    resolve(data);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> p3 = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">  fs.readFile(<span class="string">'./datas/c.txt'</span>, <span class="string">'utf8'</span>, (err, data) =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">      reject();</span><br><span class="line">    &#125;</span><br><span class="line">    resolve(data);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">p1.then(<span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(data);</span><br><span class="line">      <span class="keyword">return</span> p2;               <span class="comment">// 返回Promise对象</span></span><br><span class="line">    &#125;)</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(data);</span><br><span class="line">      <span class="keyword">return</span> p3;              <span class="comment">// 返回Promise对象</span></span><br><span class="line">    &#125;)</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(data);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+<p>Terminal（终端）输入<code>node Promise.js</code> ，运行文件，得到读取的文件内容。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-Debounce-And-Throttle/Debounce-And-Throttle" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
