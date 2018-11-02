@@ -260,6 +260,64 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-Countdown" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/11/02/Countdown/" class="article-date">
+      <time datetime="2018-11-02T03:11:50.000Z" itemprop="datePublished">2018-11-02</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/02/Countdown/">基于jQuery实现的页面秒杀工具</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;style media="screen"&gt;</span><br><span class="line">    <span class="selector-class">.num</span> &#123;</span><br><span class="line">        <span class="attribute">background-color</span>: <span class="number">#000</span>;</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">0px</span> <span class="number">3px</span>;</span><br><span class="line">        <span class="attribute">padding</span>: <span class="number">3px</span>;</span><br><span class="line">        <span class="attribute">color</span>: white;</span><br><span class="line">    &#125;</span><br><span class="line">  &lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"num fl"</span>&gt;</span>0<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"num fl"</span>&gt;</span>0<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"colon fl"</span>&gt;</span>天<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"num fl"</span>&gt;</span>0<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"num fl"</span>&gt;</span>0<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"colon fl"</span>&gt;</span>时<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"num fl"</span>&gt;</span>0<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"num fl"</span>&gt;</span>0<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"colon fl"</span>&gt;</span>分<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"num fl"</span>&gt;</span>0<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"num fl"</span>&gt;</span>0<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"colon fl"</span>&gt;</span>秒<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">      <span class="comment">//1. 指定倒计时的到期时间  2018:11:11:00:00:00     月份从0开始</span></span><br><span class="line">      <span class="keyword">var</span> to = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2018</span>, <span class="number">10</span>, <span class="number">11</span>, <span class="number">11</span>, <span class="number">11</span>, <span class="number">11</span>);</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 2. 定义定时器回调函数</span></span><br><span class="line">      <span class="function"><span class="keyword">function</span> <span class="title">antitime</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">        <span class="keyword">var</span> deltaTime = to - now;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//如果超时了，就停止倒计时</span></span><br><span class="line">        <span class="keyword">if</span> (deltaTime &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">          <span class="built_in">window</span>.clearInterval(timer);</span><br><span class="line">          <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> day = <span class="built_in">parseInt</span>(deltaTime / (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span> *<span class="number">24</span>));</span><br><span class="line">        day = day &lt; <span class="number">10</span> ? <span class="string">"0"</span> + day : day;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> hou = <span class="built_in">parseInt</span>(deltaTime / (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span>) % <span class="number">24</span>);</span><br><span class="line">        hou = hou &lt; <span class="number">10</span> ? <span class="string">"0"</span> + hou : hou;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> min = <span class="built_in">parseInt</span>(deltaTime / (<span class="number">1000</span> * <span class="number">60</span>) % <span class="number">60</span>)</span><br><span class="line">        min = min &lt; <span class="number">10</span> ? <span class="string">"0"</span> + min : min;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> sec = <span class="built_in">parseInt</span>(deltaTime / <span class="number">1000</span> % <span class="number">60</span>)</span><br><span class="line">        sec = sec &lt; <span class="number">10</span> ? <span class="string">"0"</span> + sec : sec;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> timeStr = <span class="string">`<span class="subst">$&#123;day&#125;</span><span class="subst">$&#123;hou&#125;</span><span class="subst">$&#123;min&#125;</span><span class="subst">$&#123;sec&#125;</span>`</span></span><br><span class="line"></span><br><span class="line">        $(<span class="string">".num"</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params">index, span</span>) </span>&#123;</span><br><span class="line">          $(span).html(timeStr.substring(index, index + <span class="number">1</span>));</span><br><span class="line">        &#125;);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">var</span> timer = setInterval(antitime, <span class="number">1000</span>);</span><br><span class="line">    &lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-Token" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
