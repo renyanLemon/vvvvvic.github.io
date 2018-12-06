@@ -105,6 +105,68 @@
   
     <article class="post">
       <div class="post-meta">
+        <span class="post-time">2018-12-06</span>
+      </div>
+      <div class="post-title">
+        
+          <a class="post-title-link" href="/2018/12/06/h5/">
+            
+              面试题总结之 h5
+            
+          </a>
+          
+        
+        <div class="post-tags">
+          
+        </div>
+      </div>
+      <div class="post-content">
+
+        
+
+        
+        <h4 id="1-HTML5是什么？有哪些新特性？有哪些新增标签？如何让低版本的-IE-支持-HTML5新标签？"><a href="#1-HTML5是什么？有哪些新特性？有哪些新增标签？如何让低版本的-IE-支持-HTML5新标签？" class="headerlink" title="1.HTML5是什么？有哪些新特性？有哪些新增标签？如何让低版本的 IE 支持 HTML5新标签？"></a>1.HTML5是什么？有哪些新特性？有哪些新增标签？如何让低版本的 IE 支持 HTML5新标签？</h4><ul>
+<li><p>新特性<br> 1.语意特性,添加<code>&lt;header&gt;&lt;header/&gt; &lt;nav&gt;&lt;nav&gt;</code>等标签<br> 2.多媒体， 用于媒介回放的 video 和 audio 元素<br> 3.图像效果，用于绘画的 canvas 元素，svg元素等<br> 4.离线 &amp; 存储,对本地离线存储的更好的支持,localStore,Cookies等<br> 5.设备兼容特性 ，HTML5提供了前所未有的数据与应用接入开放接口。使外部应用可以直接与浏览器内部的数据直接相连<br> 6.连接特性，更有效的连接工作效率，使得基于页面的实时聊天，更快速的网页游戏体验，更优化的在线交流得到了实现。HTML5拥有更有效的服务器推送技术，Server-Sent Event和WebSockets就是其中的两个特性，这两个特性能够帮助我们实现服务器将数据“推送”到客户端的功能<br> 7.性能与集成特性，HTML5会通过XMLHttpRequest2等技术，帮助您的Web应用和网站在多样化的环境中更快速的工作</p>
+</li>
+<li><p>新增标签<br> 1.多媒体：<code>&lt;audio&gt;&lt;/audio&gt;, &lt;video&gt;&lt;video&gt;,&lt;source&gt;&lt;/source&gt;, &lt;embed&gt;&lt;/embed&gt;, &lt;track&gt;&lt;/track&gt;</code><br> 2.新表单元素：<code>&lt;datalist&gt; ,&lt;output&gt; , &lt;keygen&gt;</code><br> 3.新文档节段和纲要:<code>&lt;header&gt;页面头部、&lt;section&gt;章节、&lt;aside&gt;边栏、&lt;article&gt;文档内容、&lt;footer&gt;页面底部、&lt;section&gt;章节、&lt;aside&gt;边栏、&lt;article&gt;文档内容、&lt;footer&gt;页面底部</code>等</p>
+</li>
+<li><p>使用html5shiv可以解决ie低版本不兼容的问题，只需要在head中加上,当版本低于IE9时，浏览器会加载html5.js脚本，使得支持html5的新功能，也可以将脚本文件下载到本地</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;!--[<span class="keyword">if</span> lt IE <span class="number">9</span>]&gt;</span><br><span class="line">  &lt;script src=<span class="string">'http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js'</span>&gt;</span><br><span class="line">  &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">  &lt;![endif]--&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>head&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="2-input-有哪些新增类型？"><a href="#2-input-有哪些新增类型？" class="headerlink" title="2.input 有哪些新增类型？"></a>2.input 有哪些新增类型？</h4><ul>
+<li>color,选择颜色</li>
+<li>date 选择日期</li>
+<li>email 用于检测输入的是否为email格式的地址</li>
+<li>month 选择月份</li>
+<li>number  用于应该包含数值的输入域，可以设定对输入值的限定</li>
+<li>range 用于定义一个滑动条，表示范围</li>
+<li>search 用于搜索，比如站点搜索或 Google 搜索</li>
+<li>tel 输入电话号码<br> -time 选择时间</li>
+<li>url 输入网址</li>
+<li>week 选择周和年</li>
+</ul>
+<h4 id="3-WebSocket"><a href="#3-WebSocket" class="headerlink" title="3.WebSocket"></a>3.WebSocket</h4><p>​    WebSocket 是HTML5提出的协议，是一个<strong>持久化</strong>协议；</p>
+<p>​    服务器可以主动推送信息给客户端；</p>
+<p>​    只需要一次HTTP请求，与服务器建立持久化连接，服务器会一直知道你的信息，直到你关闭请求。</p>
+<p>​    HTTP特性：无持久化链接      被动性（服务器不能主动联系客户端，只能客户端发起）</p>
+<ul>
+<li><p><strong>ajax轮询</strong></p>
+</li>
+<li><p><strong>long poll</strong></p>
+<p>采用阻塞模式，也就是说，客户端发起连接之后，如果没消息，就一直不返回Response给客户端。直到有消息才返回，返回完之后，客户端再次建立连接，周而复始。</p>
+<p>缺点：需要有很高的并发，也就是同时接待客户的能力。</p>
+<p>浏览器每隔几秒就发送一次请求，询问服务器是否有新信息；</p>
+<p>缺点：需要服务器有很快的处理速度和资源。</p>
+</li>
+</ul>
+
+        
+      </div>
+    </article>
+  
+    <article class="post">
+      <div class="post-meta">
         <span class="post-time">2018-11-02</span>
       </div>
       <div class="post-title">
@@ -376,68 +438,6 @@
         <h1 id="遍历对象的方法"><a href="#遍历对象的方法" class="headerlink" title="遍历对象的方法"></a>遍历对象的方法</h1><h5 id="1-for-…-in-语句"><a href="#1-for-…-in-语句" class="headerlink" title="1. for … in 语句"></a>1. for … in 语句</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for (let variable in object)  &#123; ... &#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> obj) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"key:"</span> + i + <span class="string">", value:"</span> + obj[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>数组Array的遍历，i则为数字</p>
-
-        
-      </div>
-    </article>
-  
-    <article class="post">
-      <div class="post-meta">
-        <span class="post-time">2018-10-11</span>
-      </div>
-      <div class="post-title">
-        
-          <a class="post-title-link" href="/2018/10/11/h5/">
-            
-              Untitled
-            
-          </a>
-          
-        
-        <div class="post-tags">
-          
-        </div>
-      </div>
-      <div class="post-content">
-
-        
-
-        
-        <h4 id="1-HTML5是什么？有哪些新特性？有哪些新增标签？如何让低版本的-IE-支持-HTML5新标签？"><a href="#1-HTML5是什么？有哪些新特性？有哪些新增标签？如何让低版本的-IE-支持-HTML5新标签？" class="headerlink" title="1.HTML5是什么？有哪些新特性？有哪些新增标签？如何让低版本的 IE 支持 HTML5新标签？"></a>1.HTML5是什么？有哪些新特性？有哪些新增标签？如何让低版本的 IE 支持 HTML5新标签？</h4><ul>
-<li><p>新特性<br> 1.语意特性,添加<code>&lt;header&gt;&lt;header/&gt; &lt;nav&gt;&lt;nav&gt;</code>等标签<br> 2.多媒体， 用于媒介回放的 video 和 audio 元素<br> 3.图像效果，用于绘画的 canvas 元素，svg元素等<br> 4.离线 &amp; 存储,对本地离线存储的更好的支持,localStore,Cookies等<br> 5.设备兼容特性 ，HTML5提供了前所未有的数据与应用接入开放接口。使外部应用可以直接与浏览器内部的数据直接相连<br> 6.连接特性，更有效的连接工作效率，使得基于页面的实时聊天，更快速的网页游戏体验，更优化的在线交流得到了实现。HTML5拥有更有效的服务器推送技术，Server-Sent Event和WebSockets就是其中的两个特性，这两个特性能够帮助我们实现服务器将数据“推送”到客户端的功能<br> 7.性能与集成特性，HTML5会通过XMLHttpRequest2等技术，帮助您的Web应用和网站在多样化的环境中更快速的工作</p>
-</li>
-<li><p>新增标签<br> 1.多媒体：<code>&lt;audio&gt;&lt;/audio&gt;, &lt;video&gt;&lt;video&gt;,&lt;source&gt;&lt;/source&gt;, &lt;embed&gt;&lt;/embed&gt;, &lt;track&gt;&lt;/track&gt;</code><br> 2.新表单元素：<code>&lt;datalist&gt; ,&lt;output&gt; , &lt;keygen&gt;</code><br> 3.新文档节段和纲要:<code>&lt;header&gt;页面头部、&lt;section&gt;章节、&lt;aside&gt;边栏、&lt;article&gt;文档内容、&lt;footer&gt;页面底部、&lt;section&gt;章节、&lt;aside&gt;边栏、&lt;article&gt;文档内容、&lt;footer&gt;页面底部</code>等</p>
-</li>
-<li><p>使用html5shiv可以解决ie低版本不兼容的问题，只需要在head中加上,当版本低于IE9时，浏览器会加载html5.js脚本，使得支持html5的新功能，也可以将脚本文件下载到本地</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;!--[<span class="keyword">if</span> lt IE <span class="number">9</span>]&gt;</span><br><span class="line">  &lt;script src=<span class="string">'http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js'</span>&gt;</span><br><span class="line">  &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">  &lt;![endif]--&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>head&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="2-input-有哪些新增类型？"><a href="#2-input-有哪些新增类型？" class="headerlink" title="2.input 有哪些新增类型？"></a>2.input 有哪些新增类型？</h4><ul>
-<li>color,选择颜色</li>
-<li>date 选择日期</li>
-<li>email 用于检测输入的是否为email格式的地址</li>
-<li>month 选择月份</li>
-<li>number  用于应该包含数值的输入域，可以设定对输入值的限定</li>
-<li>range 用于定义一个滑动条，表示范围</li>
-<li>search 用于搜索，比如站点搜索或 Google 搜索</li>
-<li>tel 输入电话号码<br> -time 选择时间</li>
-<li>url 输入网址</li>
-<li>week 选择周和年</li>
-</ul>
-<h4 id="3-WebSocket"><a href="#3-WebSocket" class="headerlink" title="3.WebSocket"></a>3.WebSocket</h4><p>​    WebSocket 是HTML5提出的协议，是一个<strong>持久化</strong>协议；</p>
-<p>​    服务器可以主动推送信息给客户端；</p>
-<p>​    只需要一次HTTP请求，与服务器建立持久化连接，服务器会一直知道你的信息，直到你关闭请求。</p>
-<p>​    HTTP特性：无持久化链接      被动性（服务器不能主动联系客户端，只能客户端发起）</p>
-<ul>
-<li><p><strong>ajax轮询</strong></p>
-</li>
-<li><p><strong>long poll</strong></p>
-<p>采用阻塞模式，也就是说，客户端发起连接之后，如果没消息，就一直不返回Response给客户端。直到有消息才返回，返回完之后，客户端再次建立连接，周而复始。</p>
-<p>缺点：需要有很高的并发，也就是同时接待客户的能力。</p>
-<p>浏览器每隔几秒就发送一次请求，询问服务器是否有新信息；</p>
-<p>缺点：需要服务器有很快的处理速度和资源。</p>
-</li>
-</ul>
 
         
       </div>
