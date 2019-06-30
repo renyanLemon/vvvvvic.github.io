@@ -1,131 +1,306 @@
-<html>
-  <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<!DOCTYPE html>
+
+
+
   
-    <link rel="icon" href="/images/favicon.ico">
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lemon">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Lemon">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lemon">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/"/>
+
+
+
+
+
   <title>Lemon</title>
-  <link rel="stylesheet" href="/css/styles.css">
-  <script src="/lib/jquery.js"></script>
-  <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
-  <script src="/js/common.js"></script>
-  <script src="/lib/bootstrap/js/bootstrap.js"></script>
-  <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  
+
+
+
+
+
+
+
+
 </head>
 
-  <body>
-    <header class="header">
-  <div class="color-bar">
-    <ul>
-      <li class="bar1"></li>
-      <li class="bar2"></li>
-      <li class="bar3"></li>
-      <li class="bar4"></li>
-      <li class="bar5"></li>
-      <li class="bar6"></li>
-    </ul>
-  </div>
-  <div class="header-wrapper">
-    <div class="blog-title">
-      
-        <img class="logo" src="/images/logo.png" alt="logo">
-      
-      <a href="/" class="title">Lemon</a>
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Lemon</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
-    <nav class="navbar navbar-menu">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" id="nav-btn" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-      </div>
-        <ul class="menu menu-pc">
-          
-            <li class="menu-item">
-              <a href="/" class="menu-item-link"><i class="fa fa-home"></i><span>首页</span></a>
-            </li>
-          
-            <li class="menu-item">
-              <a href="/tags/" class="menu-item-link"><i class="fa fa-tags"></i><span>Tags</span></a>
-            </li>
-          
-            <li class="menu-item">
-              <a href="/archives/" class="menu-item-link"><i class="fa fa-file"></i><span>归档</span></a>
-            </li>
-          
-            <li class="menu-item">
-              <a href="https://github.com/littleee/" class="menu-item-link"><i class="fa fa-github"></i><span>github</span></a>
-            </li>
-          
-        </ul>
-    </nav>
+      
+        <p class="site-subtitle"></p>
+      
   </div>
-</header>
-<div class="collapse nav-collapse" style="position:fixed;top:59px;" id="bs-example-navbar-collapse-1">
-  <ul class="menu menu-mobile" style="list-style:none">
-    
-      <li class="menu-item">
-        <a href="/" class="menu-item-link"><i class="fa fa-home"></i><span>首页</span></a>
-      </li>
-    
-      <li class="menu-item">
-        <a href="/tags/" class="menu-item-link"><i class="fa fa-tags"></i><span>Tags</span></a>
-      </li>
-    
-      <li class="menu-item">
-        <a href="/archives/" class="menu-item-link"><i class="fa fa-file"></i><span>归档</span></a>
-      </li>
-    
-      <li class="menu-item">
-        <a href="https://github.com/littleee/" class="menu-item-link"><i class="fa fa-github"></i><span>github</span></a>
-      </li>
-    
-  </ul>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
-    <main class="main">
-      <div class="content">
-        
-
-<section class="banner">
-  <div class="headintro">
-    <p class="title">code eat sleep loop</p>
-    <p class="subtitle">三流代码 &amp; 一流Bug</p>
-  </div>
-</section>
-
-
-
-<section class="posts">
+<nav class="site-nav">
   
-    <article class="post">
-      <div class="post-meta">
-        <span class="post-time">2018-12-06</span>
-      </div>
-      <div class="post-title">
+
+  
+    <ul id="menu" class="menu">
+      
         
-          <a class="post-title-link" href="/2018/12/06/h5/">
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
             
-              面试题总结之 h5
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
+            Home
           </a>
-          
+        </li>
+      
         
-        <div class="post-tags">
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/06/h5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lemon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lemon">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/06/h5/" itemprop="url">面试题总结之 h5</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-06T00:00:00+08:00">
+                2018-12-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
         </div>
-      </div>
-      <div class="post-content">
+      </header>
+    
 
-        
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
+      
+      
+
+      
         
-        <h4 id="1-HTML5是什么？有哪些新特性？有哪些新增标签？如何让低版本的-IE-支持-HTML5新标签？"><a href="#1-HTML5是什么？有哪些新特性？有哪些新增标签？如何让低版本的-IE-支持-HTML5新标签？" class="headerlink" title="1.HTML5是什么？有哪些新特性？有哪些新增标签？如何让低版本的 IE 支持 HTML5新标签？"></a>1.HTML5是什么？有哪些新特性？有哪些新增标签？如何让低版本的 IE 支持 HTML5新标签？</h4><ul>
+          
+            <h4 id="1-HTML5是什么？有哪些新特性？有哪些新增标签？如何让低版本的-IE-支持-HTML5新标签？"><a href="#1-HTML5是什么？有哪些新特性？有哪些新增标签？如何让低版本的-IE-支持-HTML5新标签？" class="headerlink" title="1.HTML5是什么？有哪些新特性？有哪些新增标签？如何让低版本的 IE 支持 HTML5新标签？"></a>1.HTML5是什么？有哪些新特性？有哪些新增标签？如何让低版本的 IE 支持 HTML5新标签？</h4><ul>
 <li><p>新特性<br> 1.语意特性,添加<code>&lt;header&gt;&lt;header/&gt; &lt;nav&gt;&lt;nav&gt;</code>等标签<br> 2.多媒体， 用于媒介回放的 video 和 audio 元素<br> 3.图像效果，用于绘画的 canvas 元素，svg元素等<br> 4.离线 &amp; 存储,对本地离线存储的更好的支持,localStore,Cookies等<br> 5.设备兼容特性 ，HTML5提供了前所未有的数据与应用接入开放接口。使外部应用可以直接与浏览器内部的数据直接相连<br> 6.连接特性，更有效的连接工作效率，使得基于页面的实时聊天，更快速的网页游戏体验，更优化的在线交流得到了实现。HTML5拥有更有效的服务器推送技术，Server-Sent Event和WebSockets就是其中的两个特性，这两个特性能够帮助我们实现服务器将数据“推送”到客户端的功能<br> 7.性能与集成特性，HTML5会通过XMLHttpRequest2等技术，帮助您的Web应用和网站在多样化的环境中更快速的工作</p>
 </li>
 <li><p>新增标签<br> 1.多媒体：<code>&lt;audio&gt;&lt;/audio&gt;, &lt;video&gt;&lt;video&gt;,&lt;source&gt;&lt;/source&gt;, &lt;embed&gt;&lt;/embed&gt;, &lt;track&gt;&lt;/track&gt;</code><br> 2.新表单元素：<code>&lt;datalist&gt; ,&lt;output&gt; , &lt;keygen&gt;</code><br> 3.新文档节段和纲要:<code>&lt;header&gt;页面头部、&lt;section&gt;章节、&lt;aside&gt;边栏、&lt;article&gt;文档内容、&lt;footer&gt;页面底部、&lt;section&gt;章节、&lt;aside&gt;边栏、&lt;article&gt;文档内容、&lt;footer&gt;页面底部</code>等</p>
@@ -161,65 +336,247 @@
 </li>
 </ul>
 
+          
         
-      </div>
-    </article>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
   
-    <article class="post">
-      <div class="post-meta">
-        <span class="post-time">2018-11-02</span>
-      </div>
-      <div class="post-title">
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/02/Countdown/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lemon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lemon">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2018/11/02/Countdown/">
-            
-              基于jQuery实现的页面秒杀工具
-            
-          </a>
-          
         
-        <div class="post-tags">
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/02/Countdown/" itemprop="url">基于jQuery实现的页面秒杀工具</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-02T11:11:50+08:00">
+                2018-11-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
         </div>
-      </div>
-      <div class="post-content">
+      </header>
+    
 
-        
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
+      
+      
+
+      
         
-        <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;style media="screen"&gt;</span><br><span class="line">    <span class="selector-class">.num</span> &#123;</span><br><span class="line">        <span class="attribute">background-color</span>: <span class="number">#000</span>;</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">0px</span> <span class="number">3px</span>;</span><br><span class="line">        <span class="attribute">padding</span>: <span class="number">3px</span>;</span><br><span class="line">        <span class="attribute">color</span>: white;</span><br><span class="line">    &#125;</span><br><span class="line">  &lt;/style&gt;</span><br></pre></td></tr></table></figure>
+          
+            <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;style media="screen"&gt;</span><br><span class="line">    <span class="selector-class">.num</span> &#123;</span><br><span class="line">        <span class="attribute">background-color</span>: <span class="number">#000</span>;</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">0px</span> <span class="number">3px</span>;</span><br><span class="line">        <span class="attribute">padding</span>: <span class="number">3px</span>;</span><br><span class="line">        <span class="attribute">color</span>: white;</span><br><span class="line">    &#125;</span><br><span class="line">  &lt;/style&gt;</span><br></pre></td></tr></table></figure>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"num fl"</span>&gt;</span>0<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"num fl"</span>&gt;</span>0<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"colon fl"</span>&gt;</span>天<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"num fl"</span>&gt;</span>0<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"num fl"</span>&gt;</span>0<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"colon fl"</span>&gt;</span>时<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"num fl"</span>&gt;</span>0<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"num fl"</span>&gt;</span>0<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"colon fl"</span>&gt;</span>分<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"num fl"</span>&gt;</span>0<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"num fl"</span>&gt;</span>0<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"colon fl"</span>&gt;</span>秒<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">      <span class="comment">//1. 指定倒计时的到期时间  2018:11:11:00:00:00     月份从0开始</span></span><br><span class="line">      <span class="keyword">var</span> to = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2018</span>, <span class="number">10</span>, <span class="number">11</span>, <span class="number">11</span>, <span class="number">11</span>, <span class="number">11</span>);</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 2. 定义定时器回调函数</span></span><br><span class="line">      <span class="function"><span class="keyword">function</span> <span class="title">antitime</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">        <span class="keyword">var</span> deltaTime = to - now;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//如果超时了，就停止倒计时</span></span><br><span class="line">        <span class="keyword">if</span> (deltaTime &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">          <span class="built_in">window</span>.clearInterval(timer);</span><br><span class="line">          <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> day = <span class="built_in">parseInt</span>(deltaTime / (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span> *<span class="number">24</span>));</span><br><span class="line">        day = day &lt; <span class="number">10</span> ? <span class="string">"0"</span> + day : day;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> hou = <span class="built_in">parseInt</span>(deltaTime / (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span>) % <span class="number">24</span>);</span><br><span class="line">        hou = hou &lt; <span class="number">10</span> ? <span class="string">"0"</span> + hou : hou;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> min = <span class="built_in">parseInt</span>(deltaTime / (<span class="number">1000</span> * <span class="number">60</span>) % <span class="number">60</span>)</span><br><span class="line">        min = min &lt; <span class="number">10</span> ? <span class="string">"0"</span> + min : min;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> sec = <span class="built_in">parseInt</span>(deltaTime / <span class="number">1000</span> % <span class="number">60</span>)</span><br><span class="line">        sec = sec &lt; <span class="number">10</span> ? <span class="string">"0"</span> + sec : sec;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> timeStr = <span class="string">`<span class="subst">$&#123;day&#125;</span><span class="subst">$&#123;hou&#125;</span><span class="subst">$&#123;min&#125;</span><span class="subst">$&#123;sec&#125;</span>`</span></span><br><span class="line"></span><br><span class="line">        $(<span class="string">".num"</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params">index, span</span>) </span>&#123;</span><br><span class="line">          $(span).html(timeStr.substring(index, index + <span class="number">1</span>));</span><br><span class="line">        &#125;);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">var</span> timer = setInterval(antitime, <span class="number">1000</span>);</span><br><span class="line">    &lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
 
+          
         
-      </div>
-    </article>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
   
-    <article class="post">
-      <div class="post-meta">
-        <span class="post-time">2018-11-01</span>
-      </div>
-      <div class="post-title">
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/01/Token/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lemon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lemon">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2018/11/01/Token/">
-            
-              Token
-            
-          </a>
-          
         
-        <div class="post-tags">
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/01/Token/" itemprop="url">Token</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-01T11:16:52+08:00">
+                2018-11-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-            <p>基于 Token 的身份验证方法</p>
+
           
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
         </div>
-      </div>
-      <div class="post-content">
+      </header>
+    
 
-        
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
+      
+      
+
+      
         
-        <h1 id="Token"><a href="#Token" class="headerlink" title="Token"></a>Token</h1><p><strong>基于 Token 的身份验证方法</strong></p>
+          
+            <h1 id="Token"><a href="#Token" class="headerlink" title="Token"></a>Token</h1><p><strong>基于 Token 的身份验证方法</strong></p>
 <p>使用基于 Token 的身份验证方法，在服务端不需要存储用户的登录记录。大概的流程是这样的：</p>
 <ol>
 <li>客户端使用 用户名 跟 密码 请求登录</li>
@@ -239,33 +596,125 @@
 <p>对于退出功能，只需要清除 Token 即可</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">handleSignout()&#123;</span><br><span class="line">  sessionStorage.clear()</span><br><span class="line">  <span class="keyword">this</span>.$router.push(<span class="string">'/login'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+          
         
-      </div>
-    </article>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
   
-    <article class="post">
-      <div class="post-meta">
-        <span class="post-time">2018-10-21</span>
-      </div>
-      <div class="post-title">
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/21/Promise/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lemon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lemon">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2018/10/21/Promise/">
-            
-              Promise
-            
-          </a>
-          
         
-        <div class="post-tags">
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/21/Promise/" itemprop="url">Promise</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-21T11:11:11+08:00">
+                2018-10-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
         </div>
-      </div>
-      <div class="post-content">
+      </header>
+    
 
-        
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
+      
+      
+
+      
         
-        <h1 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h1><p>Promise  解决问题—回调地狱（异步操作层层嵌套）</p>
+          
+            <h1 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h1><p>Promise  解决问题—回调地狱（异步操作层层嵌套）</p>
 <ul>
 <li><p>是一个构造函数</p>
 </li>
@@ -298,33 +747,125 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> p1 = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">  fs.readFile(<span class="string">'./datas/a.txt'</span>, <span class="string">'utf8'</span>, (err, data) =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">      reject();</span><br><span class="line">    &#125;</span><br><span class="line">    resolve(data);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> p2 = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">  fs.readFile(<span class="string">'./datas/b.txt'</span>, <span class="string">'utf8'</span>, (err, data) =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">      reject();</span><br><span class="line">    &#125;</span><br><span class="line">    resolve(data);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> p3 = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">  fs.readFile(<span class="string">'./datas/c.txt'</span>, <span class="string">'utf8'</span>, (err, data) =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">      reject();</span><br><span class="line">    &#125;</span><br><span class="line">    resolve(data);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">p1.then(<span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(data);</span><br><span class="line">      <span class="keyword">return</span> p2;               <span class="comment">// 返回Promise对象</span></span><br><span class="line">    &#125;)</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(data);</span><br><span class="line">      <span class="keyword">return</span> p3;              <span class="comment">// 返回Promise对象</span></span><br><span class="line">    &#125;)</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(data);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
 <p>Terminal（终端）输入<code>node Promise.js</code> ，运行文件，得到读取的文件内容。</p>
 
+          
         
-      </div>
-    </article>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
   
-    <article class="post">
-      <div class="post-meta">
-        <span class="post-time">2018-10-18</span>
-      </div>
-      <div class="post-title">
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/18/Debounce-And-Throttle/Debounce-And-Throttle/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lemon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lemon">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2018/10/18/Debounce-And-Throttle/Debounce-And-Throttle/">
-            
-              函数防抖与函数节流
-            
-          </a>
-          
         
-        <div class="post-tags">
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/18/Debounce-And-Throttle/Debounce-And-Throttle/" itemprop="url">函数防抖与函数节流</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-18T00:00:00+08:00">
+                2018-10-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
         </div>
-      </div>
-      <div class="post-content">
+      </header>
+    
 
-        
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
+      
+      
+
+      
         
-        <p>###函数防抖  debounce</p>
+          
+            <p>###函数防抖  debounce</p>
 <p>场景：淘宝首页，侧边栏快速划过不显示内容，即从 【女装】快速无间隙滑动到【鲜花】，两模块中间的内容不显示。停到某一个侧边栏才显示侧边栏内容。</p>
 <p><img src="/Users/renyan/Desktop/lianxi/函数节流与函数防抖/taobao.png" alt=""></p>
 <p>以 页面元素滚动监听 为例：</p>
@@ -378,126 +919,494 @@
 </ol>
 </blockquote>
 
+          
         
-      </div>
-    </article>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
   
-    <article class="post">
-      <div class="post-meta">
-        <span class="post-time">2018-10-12</span>
-      </div>
-      <div class="post-title">
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/12/Error/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lemon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lemon">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2018/10/12/Error/">
-            
-              Maximum call stack size exceeded at String.split
-            
-          </a>
-          
         
-        <div class="post-tags">
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/12/Error/" itemprop="url">Maximum call stack size exceeded at String.split</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-12T11:41:19+08:00">
+                2018-10-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
         </div>
-      </div>
-      <div class="post-content">
+      </header>
+    
 
-        
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
+      
+      
+
+      
         
-        <h1 id="Maximum-call-stack-size-exceeded-at-String-split"><a href="#Maximum-call-stack-size-exceeded-at-String-split" class="headerlink" title="Maximum call stack size exceeded at String.split"></a>Maximum call stack size exceeded at String.split</h1><h2 id="Uncaught-RangeError"><a href="#Uncaught-RangeError" class="headerlink" title="Uncaught RangeError"></a>Uncaught RangeError</h2><h3 id="题目：统计-1-到-400亿-之间的自然数中含有多少个1？"><a href="#题目：统计-1-到-400亿-之间的自然数中含有多少个1？" class="headerlink" title="题目：统计 1 到 400亿 之间的自然数中含有多少个1？"></a>题目：统计 1 到 400亿 之间的自然数中含有多少个1？</h3><p>比如1-21中，有1、10、11、12、13、14、15、16、17、18、19、20、21这么多自然数有13个1</p>
+          
+            <h1 id="Maximum-call-stack-size-exceeded-at-String-split"><a href="#Maximum-call-stack-size-exceeded-at-String-split" class="headerlink" title="Maximum call stack size exceeded at String.split"></a>Maximum call stack size exceeded at String.split</h1><h2 id="Uncaught-RangeError"><a href="#Uncaught-RangeError" class="headerlink" title="Uncaught RangeError"></a>Uncaught RangeError</h2><h3 id="题目：统计-1-到-400亿-之间的自然数中含有多少个1？"><a href="#题目：统计-1-到-400亿-之间的自然数中含有多少个1？" class="headerlink" title="题目：统计 1 到 400亿 之间的自然数中含有多少个1？"></a>题目：统计 1 到 400亿 之间的自然数中含有多少个1？</h3><p>比如1-21中，有1、10、11、12、13、14、15、16、17、18、19、20、21这么多自然数有13个1</p>
 <h4 id="代码如下：（错误代码）"><a href="#代码如下：（错误代码）" class="headerlink" title="代码如下：（错误代码）"></a>代码如下：（错误代码）</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> getNum = <span class="function"><span class="keyword">function</span>(<span class="params">maxNum</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> str = num.toString();</span><br><span class="line">  <span class="keyword">var</span> arr = str.split(<span class="string">''</span>);</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (arr[i] == <span class="number">1</span>) &#123;</span><br><span class="line">      count++;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  num++;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (num &lt;= maxNum) &#123;</span><br><span class="line">    getNum(maxNum);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">getNum(<span class="number">22222</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(count);</span><br></pre></td></tr></table></figure>
 <p>上述代码在 参数为小数字的时候正常执行， 当参数数字过大，就会报错：Maximum call stack size exceeded at String.split</p>
 <p>未解决？</p>
 
+          
         
-      </div>
-    </article>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
   
-    <article class="post">
-      <div class="post-meta">
-        <span class="post-time">2018-10-11</span>
-      </div>
-      <div class="post-title">
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/11/遍历对象的方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lemon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lemon">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2018/10/11/遍历对象的方法/">
-            
-              遍历对象的方法
-            
-          </a>
-          
         
-        <div class="post-tags">
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/11/遍历对象的方法/" itemprop="url">遍历对象的方法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-11T17:12:32+08:00">
+                2018-10-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
         </div>
-      </div>
-      <div class="post-content">
+      </header>
+    
 
-        
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
+      
+      
+
+      
         
-        <h1 id="遍历对象的方法"><a href="#遍历对象的方法" class="headerlink" title="遍历对象的方法"></a>遍历对象的方法</h1><h5 id="1-for-…-in-语句"><a href="#1-for-…-in-语句" class="headerlink" title="1. for … in 语句"></a>1. for … in 语句</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for (let variable in object)  &#123; ... &#125;</span><br></pre></td></tr></table></figure>
+          
+            <h1 id="遍历对象的方法"><a href="#遍历对象的方法" class="headerlink" title="遍历对象的方法"></a>遍历对象的方法</h1><h5 id="1-for-…-in-语句"><a href="#1-for-…-in-语句" class="headerlink" title="1. for … in 语句"></a>1. for … in 语句</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for (let variable in object)  &#123; ... &#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> obj) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"key:"</span> + i + <span class="string">", value:"</span> + obj[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>数组Array的遍历，i则为数字</p>
 
+          
         
-      </div>
-    </article>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
   
-    <article class="post">
-      <div class="post-meta">
-        <span class="post-time">2018-09-28</span>
-      </div>
-      <div class="post-title">
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/28/fetch/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lemon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lemon">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2018/09/28/fetch/">
-            
-              fetch
-            
-          </a>
-          
         
-        <div class="post-tags">
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/28/fetch/" itemprop="url">fetch</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-28T11:16:52+08:00">
+                2018-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
         </div>
-      </div>
-      <div class="post-content">
+      </header>
+    
 
-        
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
+      
+      
+
+      
         
-        <h1 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a>fetch</h1><p>fetch使用了Promise<br>Promise 对象代表一个异步操作,有三种状态:Pending(进行中) Resolved(已完成) Rejected(已失效)</p>
+          
+            <h1 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a>fetch</h1><p>fetch使用了Promise<br>Promise 对象代表一个异步操作,有三种状态:Pending(进行中) Resolved(已完成) Rejected(已失效)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">语法:</span><br><span class="line"> fetch(参数)</span><br><span class="line"> .then(完成的回调函数)</span><br><span class="line"> .catch(失败的回调函数)</span><br></pre></td></tr></table></figure>
 <h3 id="get-请求"><a href="#get-请求" class="headerlink" title="get 请求"></a>get 请求</h3><p>  默认get请求<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fetch(url?key1=val1&amp;key2=val2&amp;...)</span><br><span class="line">            .then((response) =&gt; response.json())      //将Promise对象转换成json对象</span><br><span class="line">            .then((json) =&gt; &#123;</span><br><span class="line">                //处理返回值</span><br><span class="line">            &#125;)</span><br><span class="line">            .catch((error) =&gt; &#123;</span><br><span class="line">                //异常处理</span><br><span class="line">       	   &#125;)</span><br></pre></td></tr></table></figure></p>
 <h3 id="post-请求"><a href="#post-请求" class="headerlink" title="post 请求"></a>post 请求</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">fetch(url,&#123;</span><br><span class="line">          method: &apos;POST&apos;,</span><br><span class="line">          headers: &#123;</span><br><span class="line">             &quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;</span><br><span class="line">          &#125;,</span><br><span class="line">          body: key1=val1&amp;key2=val2&amp;...</span><br><span class="line">        &#125;)</span><br><span class="line">        .then((response) =&gt; &#123;</span><br><span class="line">          return response.json();</span><br><span class="line">        &#125;)</span><br><span class="line">        .then((info) =&gt; &#123;</span><br><span class="line">          //处理返回值</span><br><span class="line">        &#125;)</span><br><span class="line">        .catch((error) =&gt; &#123;</span><br><span class="line">          //异常处理</span><br><span class="line">        &#125;)</span><br></pre></td></tr></table></figure>
 <h3 id="delete-请求"><a href="#delete-请求" class="headerlink" title="delete 请求"></a>delete 请求</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">fetch(url,&#123;</span><br><span class="line">          method: &apos;delete&apos;,      // 大小写均可</span><br><span class="line">          headers: &#123;</span><br><span class="line">             &quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;</span><br><span class="line">          &#125;,</span><br><span class="line">          body: key1=val1&amp;key2=val2&amp;...</span><br><span class="line">        &#125;)</span><br><span class="line">        .then((response) =&gt; &#123;</span><br><span class="line">          return response.json();</span><br><span class="line">        &#125;)</span><br><span class="line">        .then((info) =&gt; &#123;</span><br><span class="line">          //处理返回值</span><br><span class="line">        &#125;)</span><br><span class="line">        .catch((error) =&gt; &#123;</span><br><span class="line">          //异常处理</span><br><span class="line">        &#125;)</span><br></pre></td></tr></table></figure>
 
+          
         
-      </div>
-    </article>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
   
-    <article class="post">
-      <div class="post-meta">
-        <span class="post-time">2018-09-05</span>
-      </div>
-      <div class="post-title">
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/05/axios/axios/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lemon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lemon">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2018/09/05/axios/axios/">
-            
-              Axios
-            
-          </a>
-          
         
-        <div class="post-tags">
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/05/axios/axios/" itemprop="url">Axios</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-05T09:20:59+08:00">
+                2018-09-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
         </div>
-      </div>
-      <div class="post-content">
+      </header>
+    
 
-        
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
+      
+      
+
+      
         
-        <p>#Axios</p>
+          
+            <p>#Axios</p>
 <p>Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。</p>
 <h4 id="1-GET请求"><a href="#1-GET请求" class="headerlink" title="1. GET请求"></a>1. GET请求</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">axios.get(<span class="string">'/user?ID=12345'</span>)</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(response);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(error);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 或</span></span><br><span class="line">axios.get(<span class="string">'/user'</span>, &#123;</span><br><span class="line">    params: &#123;</span><br><span class="line">      ID: <span class="number">12345</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(response);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(error);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
 <h4 id="2-POST请求"><a href="#2-POST请求" class="headerlink" title="2. POST请求"></a>2. POST请求</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">axios.post(<span class="string">'/user'</span>, &#123;</span><br><span class="line">    firstName: <span class="string">'Fred'</span>,</span><br><span class="line">    lastName: <span class="string">'Flintstone'</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(response);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(error);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
@@ -509,37 +1418,316 @@
 <p>返回值：</p>
 <p><img src="/Users/renyan/myNotes/axios/imgs/axios.png" alt=""></p>
 
+          
         
-      </div>
-    </article>
-  
-</section>
-
-
-
-      </div>
-        <div class="footer">
-  <div class="footer-wrapper">
-    <div class="copyright">
       
-      <span>&copy;</span>
-      
-      <span>2017 - 2019</span>
-      
-      <span class="author"><i class="fa fa-user"></i>Lemon</span>
     </div>
     
-      <span>Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> </span>
     
     
-      <span>|</span> <span>Theme - <a href="https://github.com/littleee/corazon">Corazon</a></span>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
       
-        <span>v1.0.0</span>
+
       
-    
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Lemon</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lemon</span>
+
+  
 </div>
 
-    </main>
-  </body>
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
 </html>
