@@ -138,7 +138,7 @@
 </blockquote>
 <p>微任务与宏任务：<br>  微任务：macro-task<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.then(console.log)</span><br></pre></td></tr></table></figure></p>
 <p>  宏任务：micro-task<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(function() &#123;</span><br><span class="line">  console.log(1);</span><br><span class="line">&#125;, 0)</span><br></pre></td></tr></table></figure></p>
-<p>  其他的微任务和宏任务：<br>  微任务：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- Promise</span><br><span class="line">- process.nextTick</span><br></pre></td></tr></table></figure></p>
+<h3 id="其他的微任务和宏任务："><a href="#其他的微任务和宏任务：" class="headerlink" title="其他的微任务和宏任务："></a>其他的微任务和宏任务：</h3><p>  微任务：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- Promise</span><br><span class="line">- process.nextTick</span><br></pre></td></tr></table></figure></p>
 <p>  宏任务：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- setTimeout</span><br><span class="line">- setInterval</span><br></pre></td></tr></table></figure></p>
 
         
