@@ -1,107 +1,140 @@
+<!DOCTYPE html>
 <html>
-  <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<head>
+  <meta charset="utf-8">
   
-    <link rel="icon" href="/images/favicon.ico">
+  <title>函数防抖与函数节流 | Lemon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <title>Lemon</title>
-  <link rel="stylesheet" href="/css/styles.css">
-  <script src="/lib/jquery.js"></script>
-  <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
-  <script src="/js/common.js"></script>
-  <script src="/lib/bootstrap/js/bootstrap.js"></script>
-  <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  
+  
+  
+  <meta name="description" content="函数防抖  debounce场景：淘宝首页，侧边栏快速划过不显示内容，即从 【女装】快速无间隙滑动到【鲜花】，两模块中间的内容不显示。停到某一个侧边栏才显示侧边栏内容。  以 页面元素滚动监听 为例： html 部分123&amp;lt;div class=&quot;box&quot;&amp;gt;  &amp;lt;div class=&quot;head&quot;&amp;gt;顶部导航栏&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt; css 部分1234">
+<meta property="og:type" content="article">
+<meta property="og:title" content="函数防抖与函数节流">
+<meta property="og:url" content="http://yoursite.com/2018/10/18/Debounce-And-Throttle/Debounce-And-Throttle/index.html">
+<meta property="og:site_name" content="Lemon">
+<meta property="og:description" content="函数防抖  debounce场景：淘宝首页，侧边栏快速划过不显示内容，即从 【女装】快速无间隙滑动到【鲜花】，两模块中间的内容不显示。停到某一个侧边栏才显示侧边栏内容。  以 页面元素滚动监听 为例： html 部分123&amp;lt;div class=&quot;box&quot;&amp;gt;  &amp;lt;div class=&quot;head&quot;&amp;gt;顶部导航栏&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt; css 部分1234">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2018/10/18/images/taobao.png">
+<meta property="og:updated_time" content="2019-07-02T13:51:54.850Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="函数防抖与函数节流">
+<meta name="twitter:description" content="函数防抖  debounce场景：淘宝首页，侧边栏快速划过不显示内容，即从 【女装】快速无间隙滑动到【鲜花】，两模块中间的内容不显示。停到某一个侧边栏才显示侧边栏内容。  以 页面元素滚动监听 为例： html 部分123&amp;lt;div class=&quot;box&quot;&amp;gt;  &amp;lt;div class=&quot;head&quot;&amp;gt;顶部导航栏&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt; css 部分1234">
+<meta name="twitter:image" content="http://yoursite.com/2018/10/18/images/taobao.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Lemon" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
 </head>
 
-  <body>
-    <header class="header">
-  <div class="color-bar">
-    <ul>
-      <li class="bar1"></li>
-      <li class="bar2"></li>
-      <li class="bar3"></li>
-      <li class="bar4"></li>
-      <li class="bar5"></li>
-      <li class="bar6"></li>
-    </ul>
-  </div>
-  <div class="header-wrapper">
-    <div class="blog-title">
-      
-        <img class="logo" src="/images/logo.png" alt="logo">
-      
-      <a href="/" class="title">Lemon</a>
-    </div>
-    <nav class="navbar navbar-menu">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" id="nav-btn" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="Lemon" rel="home"> Lemon </a>
+            
+          </h1>
+          
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
       </div>
-        <ul class="menu menu-pc">
-          
-            <li class="menu-item">
-              <a href="/" class="menu-item-link"><i class="fa fa-home"></i><span>首页</span></a>
-            </li>
-          
-            <li class="menu-item">
-              <a href="/tags/" class="menu-item-link"><i class="fa fa-tags"></i><span>Tags</span></a>
-            </li>
-          
-            <li class="menu-item">
-              <a href="/archives/" class="menu-item-link"><i class="fa fa-file"></i><span>归档</span></a>
-            </li>
-          
-            <li class="menu-item">
-              <a href="https://github.com/littleee/" class="menu-item-link"><i class="fa fa-github"></i><span>github</span></a>
-            </li>
-          
-        </ul>
-    </nav>
   </div>
 </header>
-<div class="collapse nav-collapse" style="position:fixed;top:59px;" id="bs-example-navbar-collapse-1">
-  <ul class="menu menu-mobile" style="list-style:none">
-    
-      <li class="menu-item">
-        <a href="/" class="menu-item-link"><i class="fa fa-home"></i><span>首页</span></a>
-      </li>
-    
-      <li class="menu-item">
-        <a href="/tags/" class="menu-item-link"><i class="fa fa-tags"></i><span>Tags</span></a>
-      </li>
-    
-      <li class="menu-item">
-        <a href="/archives/" class="menu-item-link"><i class="fa fa-file"></i><span>归档</span></a>
-      </li>
-    
-      <li class="menu-item">
-        <a href="https://github.com/littleee/" class="menu-item-link"><i class="fa fa-github"></i><span>github</span></a>
-      </li>
-    
-  </ul>
-</div>
 
-    <main class="main">
-      <div class="content">
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
         
-  <article class="post">
-    <div class="post-title">
-      <h2 class="title">函数防抖与函数节流</h2>
+          <section id="main" style="float:none;"><article id="post-Debounce-And-Throttle/Debounce-And-Throttle" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      函数防抖与函数节流
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/10/18/Debounce-And-Throttle/Debounce-And-Throttle/" class="article-date">
+	  <time datetime="2018-10-17T16:00:00.000Z" itemprop="datePublished">October 18, 2018</time>
+	</a>
+
        
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
     </div>
-     <div class="post-meta">
-      <span class="post-time">2018-10-18</span>
-    </div>
-    <div class="post-content">
-      <h3 id="函数防抖-debounce"><a href="#函数防抖-debounce" class="headerlink" title="函数防抖  debounce"></a>函数防抖  debounce</h3><p>场景：淘宝首页，侧边栏快速划过不显示内容，即从 【女装】快速无间隙滑动到【鲜花】，两模块中间的内容不显示。停到某一个侧边栏才显示侧边栏内容。</p>
-<p><img src="./taobao.png" alt=""></p>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="函数防抖-debounce"><a href="#函数防抖-debounce" class="headerlink" title="函数防抖  debounce"></a>函数防抖  debounce</h3><p>场景：淘宝首页，侧边栏快速划过不显示内容，即从 【女装】快速无间隙滑动到【鲜花】，两模块中间的内容不显示。停到某一个侧边栏才显示侧边栏内容。</p>
+<p><img src="../../images/taobao.png" alt=""></p>
 <p>以 页面元素滚动监听 为例：</p>
 <p>html 部分<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"head"</span>&gt;</span>顶部导航栏<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>css 部分<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">500px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">10000px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: auto;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#aecabd</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.head</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">500px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#aacdef</span>;</span><br><span class="line">  <span class="attribute">position</span>: fixed;</span><br><span class="line">  <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -153,49 +186,189 @@
 </ol>
 </blockquote>
 
-    </div>
-  </article>
-  <div class="post-nav">
-    <div class="post-nav-next post-nav-item">
       
     </div>
-
-    <span class="post-nav-divider"></span>
-
-    <div class="post-nav-prev post-nav-item">
-    
-        <a href="/2019/06/30/formSubmissionRules/formSubmissionRules/" rel="prev" title="表单提交规则">
-          表单提交规则 <i class="fa fa-chevron-right"></i>
-        </a>
+    <footer class="entry-meta entry-footer">
       
-    </div>
+      
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
   </div>
-
-
-
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/06/30/eventLoop/eventLoop/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          事件循环
+        
       </div>
-        <div class="footer">
-  <div class="footer-wrapper">
-    <div class="copyright">
-      
-      <span>&copy;</span>
-      
-      <span>2017 - 2019</span>
-      
-      <span class="author"><i class="fa fa-user"></i>Lemon</span>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#函数防抖-debounce"><span class="nav-number">1.</span> <span class="nav-text">函数防抖  debounce</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数节流-开关-throttle"><span class="nav-number">2.</span> <span class="nav-text">函数节流 (开关)  throttle</span></a></li></ol>
+    
     </div>
-    
-      <span>Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> </span>
-    
-    
-      <span>|</span> <span>Theme - <a href="https://github.com/littleee/corazon">Corazon</a></span>
-      
-        <span>v1.0.0</span>
-      
-    
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2019 Lemon All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
   </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
 </div>
 
-    </main>
-  </body>
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
 </html>
