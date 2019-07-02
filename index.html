@@ -131,6 +131,62 @@
 <!-- Table of Contents -->
 
   
+    <article id="post-eventLoop/eventLoop"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/06/30/eventLoop/eventLoop/">事件循环</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/06/30/eventLoop/eventLoop/" class="article-date">
+	  <time datetime="2019-06-29T16:00:00.000Z" itemprop="datePublished">June 30, 2019</time>
+	</a>
+
+       
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一道面试题"><a href="#一道面试题" class="headerlink" title="一道面试题"></a>一道面试题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(function() &#123;</span><br><span class="line">  console.log(1);</span><br><span class="line">&#125;, 0)</span><br><span class="line"></span><br><span class="line">new Promise(function(resolve,reject) &#123;</span><br><span class="line">  resolve(2)</span><br><span class="line">  console.log(0)</span><br><span class="line">&#125;).then(console.log)</span><br><span class="line"></span><br><span class="line">console.log(3);</span><br></pre></td></tr></table></figure>
+<h3 id="控制台打印结果"><a href="#控制台打印结果" class="headerlink" title="控制台打印结果"></a>控制台打印结果</h3><p><img src="../../images/eventLoop.png" alt=""></p>
+<h3 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h3><ul>
+<li>JavaScript是单线程的语言</li>
+<li>Event Loop是javascript的执行机制</li>
+</ul>
+<p>js的单线程（single threaded）和异步（asynchronous）:<br>  单线程：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">new Promise(function(resolve,reject) &#123;</span><br><span class="line">  console.log(0)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">console.log(3);</span><br></pre></td></tr></table></figure></p>
+<p>  进入队列：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(function() &#123;</span><br><span class="line">  console.log(1);</span><br><span class="line">&#125;, 0)</span><br><span class="line"></span><br><span class="line">.then(console.log)</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>new Promise() 是同步任务<br>.then() 是异步任务</p>
+</blockquote>
+<p>微任务与宏任务：<br>  微任务：macro-task<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.then(console.log)</span><br></pre></td></tr></table></figure></p>
+<p>  宏任务：micro-task<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(function() &#123;</span><br><span class="line">  console.log(1);</span><br><span class="line">&#125;, 0)</span><br></pre></td></tr></table></figure></p>
+<h3 id="其他的微任务和宏任务："><a href="#其他的微任务和宏任务：" class="headerlink" title="其他的微任务和宏任务："></a>其他的微任务和宏任务：</h3><p>  微任务：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- Promise</span><br><span class="line">- process.nextTick</span><br></pre></td></tr></table></figure></p>
+<p>  宏任务：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- setTimeout</span><br><span class="line">- setInterval</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-formSubmissionRules/formSubmissionRules"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -158,65 +214,9 @@
       
         <h2 id="表单提交规则"><a href="#表单提交规则" class="headerlink" title="表单提交规则"></a>表单提交规则</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-form :model=&quot;formInline&quot;&gt;</span><br><span class="line">    &lt;el-form-item&gt;</span><br><span class="line">      &lt;button @click=&quot;handleClick&quot;&gt;Button&lt;/button&gt;</span><br><span class="line">    &lt;/el-form-item&gt;</span><br><span class="line">  &lt;el-form-item label=&quot;审批人&quot;&gt;</span><br><span class="line">    &lt;el-input v-model=&quot;formInline.user&quot; placeholder=&quot;审批人&quot;&gt;&lt;/el-input&gt;</span><br><span class="line">  &lt;/el-form-item&gt;</span><br><span class="line">&lt;/el-form&gt;</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">handleClick() &#123;</span><br><span class="line">        console.log(123)</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>input 输入框内按下enter键，会触发button方法<br> <img src="./img.png" alt="image"></p>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>input 输入框内按下enter键，会触发button方法<br> <img src="../../images/formSubmissionRules.png" alt="image"></p>
 <h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>button 标签添加 type=”button”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button @click=&quot;handleClick&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;</span><br></pre></td></tr></table></figure></p>
 <h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>This is because of the following form submission rules in the HTML specification:<br>If a form has only one input field then hitting enter in this field triggers form submit<br>if a form has 2+ input fields and no buttons or input[type=submit] then hitting enter doesn’t trigger submit<br>if a form has one or more input fields and one or more buttons or input[type=submit] then hitting enter in any of the input fields will trigger the click handler on the first button or input[type=submit] and a submit handler on the enclosing form</p>
-
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-      
-      
-    </footer>
-    <hr class="entry-footer-hr">
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-eventLoop/eventLoop"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/06/30/eventLoop/eventLoop/">事件循环</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2019/06/30/eventLoop/eventLoop/" class="article-date">
-	  <time datetime="2019-06-29T16:00:00.000Z" itemprop="datePublished">June 30, 2019</time>
-	</a>
-
-       
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一道面试题"><a href="#一道面试题" class="headerlink" title="一道面试题"></a>一道面试题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(function() &#123;</span><br><span class="line">  console.log(1);</span><br><span class="line">&#125;, 0)</span><br><span class="line"></span><br><span class="line">new Promise(function(resolve,reject) &#123;</span><br><span class="line">  resolve(2)</span><br><span class="line">  console.log(0)</span><br><span class="line">&#125;).then(console.log)</span><br><span class="line"></span><br><span class="line">console.log(3);</span><br></pre></td></tr></table></figure>
-<h3 id="控制台打印结果"><a href="#控制台打印结果" class="headerlink" title="控制台打印结果"></a>控制台打印结果</h3><p><img src="/path/to/img.png" alt=""></p>
-<h3 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h3><ul>
-<li>JavaScript是单线程的语言</li>
-<li>Event Loop是javascript的执行机制</li>
-</ul>
-<p>js的单线程（single threaded）和异步（asynchronous）:<br>  单线程：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">new Promise(function(resolve,reject) &#123;</span><br><span class="line">  console.log(0)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">console.log(3);</span><br></pre></td></tr></table></figure></p>
-<p>  进入队列：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(function() &#123;</span><br><span class="line">  console.log(1);</span><br><span class="line">&#125;, 0)</span><br><span class="line"></span><br><span class="line">.then(console.log)</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>new Promise() 是同步任务<br>.then() 是异步任务</p>
-</blockquote>
-<p>微任务与宏任务：<br>  微任务：macro-task<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.then(console.log)</span><br></pre></td></tr></table></figure></p>
-<p>  宏任务：micro-task<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(function() &#123;</span><br><span class="line">  console.log(1);</span><br><span class="line">&#125;, 0)</span><br></pre></td></tr></table></figure></p>
-<h3 id="其他的微任务和宏任务："><a href="#其他的微任务和宏任务：" class="headerlink" title="其他的微任务和宏任务："></a>其他的微任务和宏任务：</h3><p>  微任务：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- Promise</span><br><span class="line">- process.nextTick</span><br></pre></td></tr></table></figure></p>
-<p>  宏任务：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- setTimeout</span><br><span class="line">- setInterval</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -443,7 +443,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2019/06/30/formSubmissionRules/formSubmissionRules/">表单提交规则</a></h6>
+              <h6 style="margin: 0;"><a href="/2019/06/30/eventLoop/eventLoop/">事件循环</a></h6>
               <span>June 30, 2019</span>
             </div>
 
@@ -455,7 +455,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2019/06/30/eventLoop/eventLoop/">事件循环</a></h6>
+              <h6 style="margin: 0;"><a href="/2019/06/30/formSubmissionRules/formSubmissionRules/">表单提交规则</a></h6>
               <span>June 30, 2019</span>
             </div>
 
