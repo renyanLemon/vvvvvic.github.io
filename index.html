@@ -3,21 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Page 1 | Lemon</title>
+  <title>Page 1 | Lemon Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
   
   <meta property="og:type" content="website">
-<meta property="og:title" content="Lemon">
+<meta property="og:title" content="Lemon Blog">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Lemon">
-<meta property="og:locale" content="default">
+<meta property="og:site_name" content="Lemon Blog">
+<meta property="og:locale" content="zh">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lemon">
-  
-    <link rel="alternate" href="/atom.xml" title="Lemon" type="application/atom+xml">
+<meta name="twitter:title" content="Lemon Blog">
   
   <link rel="icon" href="/css/images/favicon.ico">
   
@@ -61,7 +59,9 @@
 
           <h1 class="site-title">
             
-              <a href="/" title="Lemon" rel="home"> Lemon </a>
+              <a href="/" rel="home" >
+                <img style="margin-bottom: 10px;"  width="124px" height="124px" alt="Hike News" src=" /css/images/logo.png">
+              </a>
             
           </h1>
           
@@ -84,6 +84,8 @@
                     
                       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
                     
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/atom.xml">rss</a> </li>
+                    
               </ul>
             </div>
           </nav>
@@ -100,14 +102,24 @@
         
           <section id="main">
   
-    <article id="post-vueRef/ref"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-formSubmissionRules/formSubmissionRules"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/06/30/formSubmissionRules/formSubmissionRules/">表单提交规则</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="article-meta">
       
-	<a href="/2019/07/02/vueRef/ref/" class="article-date">
-	  <time datetime="2019-07-02T07:26:04.001Z" itemprop="datePublished">July 2, 2019</time>
+	<a href="/2019/06/30/formSubmissionRules/formSubmissionRules/" class="article-date">
+	  <time datetime="2019-06-29T16:00:00.000Z" itemprop="datePublished">June 30, 2019</time>
 	</a>
 
        
@@ -115,7 +127,12 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="表单提交规则"><a href="#表单提交规则" class="headerlink" title="表单提交规则"></a>表单提交规则</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-form :model=&quot;formInline&quot;&gt;</span><br><span class="line">    &lt;el-form-item&gt;</span><br><span class="line">      &lt;button @click=&quot;handleClick&quot;&gt;Button&lt;/button&gt;</span><br><span class="line">    &lt;/el-form-item&gt;</span><br><span class="line">  &lt;el-form-item label=&quot;审批人&quot;&gt;</span><br><span class="line">    &lt;el-input v-model=&quot;formInline.user&quot; placeholder=&quot;审批人&quot;&gt;&lt;/el-input&gt;</span><br><span class="line">  &lt;/el-form-item&gt;</span><br><span class="line">&lt;/el-form&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">handleClick() &#123;</span><br><span class="line">        console.log(123)</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>input 输入框内按下enter键，会触发button方法<br> <img src="../../images/formSubmissionRules.png" alt="image"></p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>button 标签添加 type=”button”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button @click=&quot;handleClick&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>This is because of the following form submission rules in the HTML specification:<br>If a form has only one input field then hitting enter in this field triggers form submit<br>if a form has 2+ input fields and no buttons or input[type=submit] then hitting enter doesn’t trigger submit<br>if a form has one or more input fields and one or more buttons or input[type=submit] then hitting enter in any of the input fields will trigger the click handler on the first button or input[type=submit] and a submit handler on the enclosing form</p>
+
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -171,52 +188,6 @@
 <p>  宏任务：micro-task<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(function() &#123;</span><br><span class="line">  console.log(1);</span><br><span class="line">&#125;, 0)</span><br></pre></td></tr></table></figure></p>
 <h3 id="其他的微任务和宏任务："><a href="#其他的微任务和宏任务：" class="headerlink" title="其他的微任务和宏任务："></a>其他的微任务和宏任务：</h3><p>  微任务：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- Promise</span><br><span class="line">- process.nextTick</span><br></pre></td></tr></table></figure></p>
 <p>  宏任务：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- setTimeout</span><br><span class="line">- setInterval</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-      
-      
-    </footer>
-    <hr class="entry-footer-hr">
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-formSubmissionRules/formSubmissionRules"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/06/30/formSubmissionRules/formSubmissionRules/">表单提交规则</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2019/06/30/formSubmissionRules/formSubmissionRules/" class="article-date">
-	  <time datetime="2019-06-29T16:00:00.000Z" itemprop="datePublished">June 30, 2019</time>
-	</a>
-
-       
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="表单提交规则"><a href="#表单提交规则" class="headerlink" title="表单提交规则"></a>表单提交规则</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-form :model=&quot;formInline&quot;&gt;</span><br><span class="line">    &lt;el-form-item&gt;</span><br><span class="line">      &lt;button @click=&quot;handleClick&quot;&gt;Button&lt;/button&gt;</span><br><span class="line">    &lt;/el-form-item&gt;</span><br><span class="line">  &lt;el-form-item label=&quot;审批人&quot;&gt;</span><br><span class="line">    &lt;el-input v-model=&quot;formInline.user&quot; placeholder=&quot;审批人&quot;&gt;&lt;/el-input&gt;</span><br><span class="line">  &lt;/el-form-item&gt;</span><br><span class="line">&lt;/el-form&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">handleClick() &#123;</span><br><span class="line">        console.log(123)</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>input 输入框内按下enter键，会触发button方法<br> <img src="../../images/formSubmissionRules.png" alt="image"></p>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>button 标签添加 type=”button”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button @click=&quot;handleClick&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;</span><br></pre></td></tr></table></figure></p>
-<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>This is because of the following form submission rules in the HTML specification:<br>If a form has only one input field then hitting enter in this field triggers form submit<br>if a form has 2+ input fields and no buttons or input[type=submit] then hitting enter doesn’t trigger submit<br>if a form has one or more input fields and one or more buttons or input[type=submit] then hitting enter in any of the input fields will trigger the click handler on the first button or input[type=submit] and a submit handler on the enclosing form</p>
 
       
     </div>
@@ -381,10 +352,10 @@
 
     	<ul class="clearfix widget-social-icons">   
     	
-   			<li><a href="https://github.com/iTimeTraveler" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a></li> 
+   			<li><a href="https://github.com/vvvvvic" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a></li> 
 
    		
-   			<li><a href="" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a></li> 
+   			<li><a href="https://weibo.com/u/2954402983/home?wvr=5" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a></li> 
 
    		
    			<li><a href="" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> 
@@ -431,19 +402,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2019/07/02/vueRef/ref/">(no title)</a></h6>
-              <span>July 2, 2019</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2019/06/30/eventLoop/eventLoop/">事件循环</a></h6>
+              <h6 style="margin: 0;"><a href="/2019/06/30/formSubmissionRules/formSubmissionRules/">表单提交规则</a></h6>
               <span>June 30, 2019</span>
             </div>
 
@@ -455,7 +414,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2019/06/30/formSubmissionRules/formSubmissionRules/">表单提交规则</a></h6>
+              <h6 style="margin: 0;"><a href="/2019/06/30/eventLoop/eventLoop/">事件循环</a></h6>
               <span>June 30, 2019</span>
             </div>
 
@@ -491,7 +450,7 @@
     <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -514,13 +473,15 @@
   
     <a href="/about" class="mobile-nav-link">About</a>
   
+    <a href="/atom.xml" class="mobile-nav-link">rss</a>
+  
 </nav> -->
     <footer id="footer" class="site-footer">
   
 
   <div class="clearfix container">
       <div class="site-info">
-	      &copy; 2019 Lemon All Rights Reserved.
+	      &copy; 2019 Lemon Blog All Rights Reserved.
         
             <span id="busuanzi_container_site_uv">
               本站访客数<span id="busuanzi_value_site_uv"></span>人次  
