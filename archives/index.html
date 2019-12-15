@@ -1,479 +1,517 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  
-  <title>Archives | Lemon Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  
-  
-  
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Lemon Blog">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
-<meta property="og:site_name" content="Lemon Blog">
-<meta property="og:locale" content="zh">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lemon Blog">
-  
-  <link rel="icon" href="/css/images/favicon.ico">
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
-  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-  <style type="text/css">
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
     
-  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+    <title>文章归档 | 柠檬小小</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
+    <meta name="keywords" content="柠檬小小, 前端, Web, 前端开发" >
+    <meta name="description" content="柠檬小小个人前端小站" >
 
-  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
-  <link rel="stylesheet" href="/css/style.css">
+    
+    <link rel="alternative" href="/atom.xml" title="柠檬小小" type="application/atom+xml" >
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico" >
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
 
-  <script src="/js/jquery-3.1.1.min.js"></script>
-
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.css" >
-  <link rel="stylesheet" href="/css/fashion.css" >
-  <link rel="stylesheet" href="/css/glyphs.css" >
 
 </head>
 
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
 
-
-  <body>
-
-
-  
-
-
-<header id="allheader" class="site-header" role="banner" 
-   >
-  <div class="clearfix container">
-      <div class="site-branding">
-
-          <h1 class="site-title">
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">柠檬小小</span>
+                    <span class="description">你写下的每一个bug 都是人类对抗人工智能的一颗原子弹</span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
             
-              <a href="/" rel="home" >
-                <img style="margin-bottom: 10px;"  width="124px" height="124px" alt="Hike News" src=" /css/images/logo.png">
-              </a>
+            <li rel="/archives/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
             
-          </h1>
-          
-          
+            <li rel="/archives/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
             
-          <nav id="main-navigation" class="main-navigation" role="navigation">
-            <a class="nav-open">Menu</a>
-            <a class="nav-close">Close</a>
-
-            <div class="clearfix sf-menu">
-              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+            <li rel="/archives/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/archives/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                </p>
+                <p class="sns">
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/atom.xml">rss</a> </li>
-                    
-              </ul>
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
             </div>
-          </nav>
-
-      </div>
-  </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon" >
+            </div>
+        </div>
+    </section>
 </header>
 
 
-  <div id="container">
-    <div id="wrap">
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章归档 -->
+
+    <h3 class="widget-hd">
+        <strong>
             
-      <div id="content" class="outer">
+                文章归档
+                <!-- 文章归档，可以根据日期分类 -->
+            
+        </strong>
+    </h3>
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
         
-          <section id="main">
-  <div class="archives-tags-wrap"><blockquote><span>There are 3 posts in total till now.</span></blockquote>
-
-
-
-
-
-	<!-- 完全显示 -->
-	
-	
-		
-		
-		  
-		  
-		  <section class="archives-wrap">
-		    <div class="archive-year-wrap">
-		      <h1><a href="/archives/2019" class="archive-year">2019</a></h1>
-		    </div>
-		    <div class="archives">
-		
-		<article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-
-      <a href="/2019/06/30/formSubmissionRules/formSubmissionRules/" class="archive-article-date">
-		  <time datetime="2019-06-29T16:00:00.000Z" itemprop="datePublished">Jun 30, 2019</time>
-	  </a>
-      
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2019/06/30/formSubmissionRules/formSubmissionRules/">表单提交规则</a>
-    </h1>
-  
+        <a class="cat-link" href="/categories/算法/">算法</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="https://vvvvvic.github.io/2019/12/13/algorithm/valid-parentheses/">
+    		有效的括号
+    	</a>
+    </h3>
 
     </header>
-  </div>
-</article>
-	
-		
-		
-		<article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
+    <p class="post-meta">
+        Lemon 发表于
+        <time datetime="2019-12-13T07:06:18.803Z">2019-12-13</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/in-运算符/" title="in 运算符">in 运算符</a>
+    
 
-      <a href="/2019/06/30/eventLoop/eventLoop/" class="archive-article-date">
-		  <time datetime="2019-06-29T16:00:00.000Z" itemprop="datePublished">Jun 30, 2019</time>
-	  </a>
-      
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2019/06/30/eventLoop/eventLoop/">事件循环</a>
-    </h1>
-  
+        </span>
+    </p>
 
-    </header>
-  </div>
-</article>
-	
-		
-		
-		  
-		    </div></section>
-		  
-		  
-		  <section class="archives-wrap">
-		    <div class="archive-year-wrap">
-		      <h1><a href="/archives/2018" class="archive-year">2018</a></h1>
-		    </div>
-		    <div class="archives">
-		
-		<article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <h5 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h5><p>给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串，判断字符串是否有效。</p>
+<p>有效字符串需满足：</p>
+<ul>
+<li>左括号必须用相同类型的右括号闭合。</li>
+<li>左括号必须以正确的顺序闭合。</li>
+<li>注意空字符串可被认为是有效字符串。</li>
+</ul>
+<h6 id="示例-1-输入-“-”-输出-true"><a href="#示例-1-输入-“-”-输出-true" class="headerlink" title="示例 1:输入: “()”           输出: true"></a>示例 1:输入: “()”           输出: true</h6><h6 id="示例-2-输入-“-”-输出-true"><a href="#示例-2-输入-“-”-输出-true" class="headerlink" title="示例 2:输入: “()[]{}”       输出: true"></a>示例 2:输入: “()[]{}”       输出: true</h6><h6 id="示例-3-输入-“-”-输出-false"><a href="#示例-3-输入-“-”-输出-false" class="headerlink" title="示例 3:输入: “(]”           输出: false"></a>示例 3:输入: “(]”           输出: false</h6><h6 id="示例-4-输入-“-”-输出-false"><a href="#示例-4-输入-“-”-输出-false" class="headerlink" title="示例 4:输入: “([)]”         输出: false"></a>示例 4:输入: “([)]”         输出: false</h6><h6 id="示例-5-输入-“-”-输出-true"><a href="#示例-5-输入-“-”-输出-true" class="headerlink" title="示例 5:输入: “{[]}”         输出: true"></a>示例 5:输入: “{[]}”         输出: true</h6><h5 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h5><p>可以边遍历边匹配。也就是遍历的时候遇到左括号存入数组，下次遇到的第一个右括号必须和数组中最后一个元素匹配，否则为无效字符串，匹配完成后从数组中删除此元素。若最终数组为空，表示括号已全部匹配完，字符串有效。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> isValid = <span class="function"><span class="keyword">function</span> (<span class="params">s</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> map = &#123;</span><br><span class="line">        <span class="string">"("</span>: <span class="string">")"</span>,</span><br><span class="line">        <span class="string">"["</span>: <span class="string">"]"</span>,</span><br><span class="line">        <span class="string">"&#123;"</span>: <span class="string">"&#125;"</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> leftArr = []</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> ch <span class="keyword">of</span> s)&#123;</span><br><span class="line">        <span class="keyword">if</span> (ch <span class="keyword">in</span> map) leftArr.push(ch); <span class="comment">//为左括号时，顺序保存</span></span><br><span class="line">        <span class="keyword">else</span> &#123; <span class="comment">//为右括号时，与数组末位匹配</span></span><br><span class="line">            <span class="keyword">if</span>(ch != map[leftArr.pop()]) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> !leftArr.length <span class="comment">//防止全部为左括号</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="in-运算符"><a href="#in-运算符" class="headerlink" title="in 运算符"></a>in 运算符</h4><p>如果指定的属性在指定的对象或其原型链中，则 in 运算符返回true。</p>
+<h5 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">prop in object</span><br></pre></td></tr></table></figure>
+<h5 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h5><ul>
+<li>prop         一个字符串类型或者 symbol 类型的属性名或者数组索引（非symbol类型将会强制转为字符串）。</li>
+<li>objectName   检查它（或其原型链）是否包含具有指定名称的属性的对象。</li>
+</ul>
+<h5 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h5><ul>
+<li><p>数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> trees = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"redwood"</span>, <span class="string">"bay"</span>, <span class="string">"cedar"</span>, <span class="string">"oak"</span>, <span class="string">"maple"</span>);</span><br><span class="line"></span><br><span class="line"><span class="number">0</span> <span class="keyword">in</span> trees        <span class="comment">// 返回true</span></span><br><span class="line"><span class="number">3</span> <span class="keyword">in</span> trees        <span class="comment">// 返回true</span></span><br><span class="line"><span class="number">6</span> <span class="keyword">in</span> trees        <span class="comment">// 返回false</span></span><br><span class="line"></span><br><span class="line"><span class="string">"bay"</span> <span class="keyword">in</span> trees    <span class="comment">// 返回false (必须使用索引号,而不是数组元素的值)</span></span><br><span class="line"></span><br><span class="line"><span class="string">"length"</span> <span class="keyword">in</span> trees <span class="comment">// 返回true (length是一个数组属性)</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Symbol</span>.iterator <span class="keyword">in</span> trees <span class="comment">// 返回true (数组可迭代，只在ES2015+上有效)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>内置对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"PI"</span> <span class="keyword">in</span> <span class="built_in">Math</span>          <span class="comment">// 返回true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>自定义对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mycar = &#123;</span><br><span class="line">  make: <span class="string">"Honda"</span>,</span><br><span class="line">  model: <span class="string">"Accord"</span>,</span><br><span class="line">  year: <span class="number">1998</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="string">"make"</span> <span class="keyword">in</span> mycar  <span class="comment">// 返回true</span></span><br><span class="line"><span class="string">"model"</span> <span class="keyword">in</span> mycar <span class="comment">// 返回true</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h5><p>in右操作数必须是一个对象值。例如，你可以指定使用String构造函数创建的字符串，但不能指定字符串文字。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> color1 = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"green"</span>);</span><br><span class="line"><span class="string">"length"</span> <span class="keyword">in</span> color1 <span class="comment">// 返回true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> color2 = <span class="string">"coral"</span>;</span><br><span class="line"><span class="string">"length"</span> <span class="keyword">in</span> color2 <span class="comment">// 报错(color2不是对象)</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="对被删除或值为-undefined-的属性使用in"><a href="#对被删除或值为-undefined-的属性使用in" class="headerlink" title="对被删除或值为 undefined 的属性使用in"></a>对被删除或值为 undefined 的属性使用in</h4><ul>
+<li>如果你使用 delete 运算符删除了一个属性，则 in 运算符对所删除属性返回 false。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mycar = &#123;<span class="attr">make</span>: <span class="string">"Honda"</span>, <span class="attr">model</span>: <span class="string">"Accord"</span>, <span class="attr">year</span>: <span class="number">1998</span>&#125;;</span><br><span class="line"><span class="keyword">delete</span> mycar.make;</span><br><span class="line"><span class="string">"make"</span> <span class="keyword">in</span> mycar;  <span class="comment">// 返回false</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> trees = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"redwood"</span>, <span class="string">"bay"</span>, <span class="string">"cedar"</span>, <span class="string">"oak"</span>, <span class="string">"maple"</span>);</span><br><span class="line"><span class="keyword">delete</span> trees[<span class="number">3</span>];</span><br><span class="line"><span class="number">3</span> <span class="keyword">in</span> trees; <span class="comment">// 返回false</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>如果你只是将一个属性的值赋值为undefined，而没有删除它，则 in 运算仍然会返回true。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mycar = &#123;<span class="attr">make</span>: <span class="string">"Honda"</span>, <span class="attr">model</span>: <span class="string">"Accord"</span>, <span class="attr">year</span>: <span class="number">1998</span>&#125;;</span><br><span class="line">mycar.make = <span class="literal">undefined</span>;</span><br><span class="line"><span class="string">"make"</span> <span class="keyword">in</span> mycar;  <span class="comment">// 返回true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> trees = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"redwood"</span>, <span class="string">"bay"</span>, <span class="string">"cedar"</span>, <span class="string">"oak"</span>, <span class="string">"maple"</span>);</span><br><span class="line">trees[<span class="number">3</span>] = <span class="literal">undefined</span>;</span><br><span class="line"><span class="number">3</span> <span class="keyword">in</span> trees; <span class="comment">// 返回true</span></span><br><span class="line"><span class="string">"make"</span> <span class="keyword">in</span> mycar;  <span class="comment">// 返回true</span></span><br></pre></td></tr></table></figure>
+<h4 id="继承属性"><a href="#继承属性" class="headerlink" title="继承属性"></a>继承属性</h4><p>如果一个属性是从原型链上继承来的，in 运算符也会返回 true。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"toString"</span> <span class="keyword">in</span> &#123;&#125;; <span class="comment">// 返回true</span></span><br></pre></td></tr></table></figure></p>
 
-      <a href="/2018/10/18/Debounce-And-Throttle/Debounce-And-Throttle/" class="archive-article-date">
-		  <time datetime="2018-10-17T16:00:00.000Z" itemprop="datePublished">Oct 18, 2018</time>
-	  </a>
-      
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2018/10/18/Debounce-And-Throttle/Debounce-And-Throttle/">函数防抖与函数节流</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-	
-
-	
-		</div></section>
-	
-
-
-
-</section>
-          <aside id="sidebar">
-  
-    <div style="margin: 20px 0;">
-	<div id="search-form-wrap">
-
-    <form class="search-form">
-        <label style="width: 72%;">
-            <span class="screen-reader-text">Search for:</span>
-            <input type="search" class="search-field" style="height: 36px; width: 100%;" placeholder=" Search…" value="" name="s" title="Search for:">
-        </label>
-        <input type="submit" class="search-form-submit" value="Search">
-    </form>
-    <div class="ins-search">
-    <div class="ins-search-mask"></div>
-    <div class="ins-search-container">
-        <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="Type something..."/>
-            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="ins-section-wrapper">
-            <div class="ins-section-container"></div>
+            
+            <p class="more">
+                <a href="https://vvvvvic.github.io/2019/12/13/algorithm/valid-parentheses/">阅读剩下更多</a>
+            </p>
         </div>
     </div>
-</div>
-<script>
-(function (window) {
-    var INSIGHT_CONFIG = {
-        TRANSLATION: {
-            POSTS: 'Posts',
-            PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
-            UNTITLED: '(Untitled)',
-        },
-        ROOT_URL: '/',
-        CONTENT_URL: '/content.json',
-    };
-    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-})(window);
-</script>
-<script src="/js/insight.js"></script>
+</article>
 
-</div>
-</div>
-  
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Connect With Us</h3>
-    <div class="widget widget_athemes_social_icons">
-
-    	<ul class="clearfix widget-social-icons">   
-    	
-   			<li><a href="https://github.com/vvvvvic" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a></li> 
-
-   		
-   			<li><a href="https://weibo.com/u/2954402983/home?wvr=5" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a></li> 
-
-   		
-   			<li><a href="" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> 
-
-   		
-   			<li><a href="" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> 
-
-   		
-   			<li><a href="" title="Google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li> 
-
-   		
-   			<li><a href="" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li> 
-
-   		
-   		</ul>
-
-
-   		<!--
-   		<ul class="clearfix widget-social-icons">   		
-   		<li class="widget-si-twitter"><a href="http://twitter.com" title="Twitter"><i class="ico-twitter"></i></a></li> 
-		<li class="widget-si-facebook"><a href="http://facebook.com" title="Facebook"><i class="ico-facebook"></i></a></li>
-			<li class="widget-si-gplus"><a href="http://plus.google.com" title="Google+"><i class="ico-gplus"></i></a></li>
-			<li class="widget-si-pinterest"><a href="http://pinterest.com" title="Pinterest"><i class="ico-pinterest"></i></a></li>
-			<li class="widget-si-flickr"><a href="http://flickr.com" title="Flickr"><i class="ico-flickr"></i></a></li>
-			<li class="widget-si-instagram"><a href="http://instagram.com" title="Instagram"><i class="ico-instagram"></i></a></li>
-		</ul> -->
-
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget_athemes_tabs">
-    <ul id="widget-tab" class="clearfix widget-tab-nav">
-      <li class="active"><a>Recent Posts</a></li>
-    </ul>
-    <div class="widget">
-      <ul>
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
         
-          <li class="clearfix">
+        <a class="cat-link" href="/categories/算法/">算法</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="https://vvvvvic.github.io/2019/12/12/algorithm/Integer-inversion/">
+    		整数反转
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Lemon 发表于
+        <time datetime="2019-12-12T07:08:35.303Z">2019-12-12</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <h5 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h5><p>给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。</p>
+<h6 id="示例-1-输入-123-输出-321"><a href="#示例-1-输入-123-输出-321" class="headerlink" title="示例 1:输入: 123   输出: 321"></a>示例 1:输入: 123   输出: 321</h6><h6 id="示例-2-输入-123-输出-321"><a href="#示例-2-输入-123-输出-321" class="headerlink" title="示例 2:输入: -123  输出: -321"></a>示例 2:输入: -123  输出: -321</h6><h6 id="示例-3-输入-120-输出-21"><a href="#示例-3-输入-120-输出-21" class="headerlink" title="示例 3:输入: 120   输出: 21"></a>示例 3:输入: 120   输出: 21</h6><h6 id="注意-假设我们的环境只能存储得下-32-位的有符号整数，则其数值范围为-−231-231-−-1-。请根据这个假设，如果反转后整数溢出那么就返回-0。"><a href="#注意-假设我们的环境只能存储得下-32-位的有符号整数，则其数值范围为-−231-231-−-1-。请根据这个假设，如果反转后整数溢出那么就返回-0。" class="headerlink" title="注意:假设我们的环境只能存储得下 32 位的有符号整数，则其数值范围为 [−231,  231 − 1]。请根据这个假设，如果反转后整数溢出那么就返回 0。"></a>注意:假设我们的环境只能存储得下 32 位的有符号整数，则其数值范围为 [−231,  231 − 1]。请根据这个假设，如果反转后整数溢出那么就返回 0。</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;number&#125; x</span></span><br><span class="line"><span class="comment"> * @return &#123;number&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> reverse = <span class="function"><span class="keyword">function</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> overflow = <span class="function"><span class="keyword">function</span> (<span class="params">x</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (x &gt;= <span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">31</span>) - <span class="number">1</span> || x &lt;= -<span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">31</span>)) ? <span class="number">0</span> : x</span><br><span class="line">    &#125;</span><br><span class="line">    x = overflow(x)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> isNegative = x &lt; <span class="number">0</span></span><br><span class="line">    <span class="keyword">if</span> (isNegative) &#123;</span><br><span class="line">        x = -x</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> a = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> (x &gt; <span class="number">9</span>) &#123;</span><br><span class="line">        a = a * <span class="number">10</span> + x % <span class="number">10</span> * <span class="number">10</span></span><br><span class="line">        x = <span class="built_in">parseInt</span>(x / <span class="number">10</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    a += x</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> isNegative ? overflow(-a) : overflow(a)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h5 id="Math-pow-x-y"><a href="#Math-pow-x-y" class="headerlink" title="Math.pow(x,y)"></a>Math.pow(x,y)</h5><p>pow() 方法可返回 x 的 y 次幂的值。</p>
+<ul>
+<li>x    必需。底数。必须是数字。</li>
+<li>y    必需。幂数。必须是数字。</li>
+<li>说明:如果结果是虚数或负数，则该方法将返回 NaN。如果由于指数过大而引起浮点溢出，则该方法将返回 Infinity。</li>
+</ul>
 
             
-              <div class="widget-entry-summary" style="margin: 0;">
-            
+            <p class="more">
+                <a href="https://vvvvvic.github.io/2019/12/12/algorithm/Integer-inversion/">阅读剩下更多</a>
+            </p>
+        </div>
+    </div>
+</article>
 
-              <h6 style="margin: 0;"><a href="/2019/06/30/formSubmissionRules/formSubmissionRules/">表单提交规则</a></h6>
-              <span>June 30, 2019</span>
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/算法/">算法</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="https://vvvvvic.github.io/2019/12/11/algorithm/dichotomy/">
+    		二分法 与 JS移位运算符
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Lemon 发表于
+        <time datetime="2019-12-11T06:54:38.272Z">2019-12-11</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/JS移位运算符/" title="JS移位运算符">JS移位运算符</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <h3 id="二分法"><a href="#二分法" class="headerlink" title="二分法"></a>二分法</h3><p>适用于：数组、有序。<br>逻辑为：优先和数组的中间元素比较，如果等于中间元素，则直接返回。如果不等于则取半继续查找。</p>
+<h5 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h5><p>给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。</p>
+<h6 id="示例-1-输入-1-3-5-6-5-输出-2"><a href="#示例-1-输入-1-3-5-6-5-输出-2" class="headerlink" title="示例 1:   输入: [1,3,5,6], 5       输出: 2"></a>示例 1:   输入: [1,3,5,6], 5       输出: 2</h6><h6 id="示例-2-输入-1-3-5-6-2-输出-1"><a href="#示例-2-输入-1-3-5-6-2-输出-1" class="headerlink" title="示例 2:   输入: [1,3,5,6], 2       输出: 1"></a>示例 2:   输入: [1,3,5,6], 2       输出: 1</h6><h6 id="示例-3-输入-1-3-5-6-7-输出-4"><a href="#示例-3-输入-1-3-5-6-7-输出-4" class="headerlink" title="示例 3:   输入: [1,3,5,6], 7       输出: 4"></a>示例 3:   输入: [1,3,5,6], 7       输出: 4</h6><h6 id="示例-4-输入-1-3-5-6-0-输出-0"><a href="#示例-4-输入-1-3-5-6-0-输出-0" class="headerlink" title="示例 4:   输入: [1,3,5,6], 0       输出: 0"></a>示例 4:   输入: [1,3,5,6], 0       输出: 0</h6><h6 id="解答："><a href="#解答：" class="headerlink" title="解答："></a>解答：</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> searchInsert = <span class="function"><span class="keyword">function</span> (<span class="params">nums, target</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> left = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">var</span> right = nums.length - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (target &gt; nums[right]) <span class="keyword">return</span> right + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (left &lt; right) &#123;</span><br><span class="line">        <span class="keyword">var</span> index = <span class="built_in">parseInt</span>((left + right) &gt;&gt;&gt; <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span> (nums[index] &lt; target) left = index + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> right = index;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> left;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="JS移位运算符"><a href="#JS移位运算符" class="headerlink" title="JS移位运算符"></a>JS移位运算符</h3><p>移位运算就是对二进制进行有规律低移位</p>
+
+            
+            <p class="more">
+                <a href="https://vvvvvic.github.io/2019/12/11/algorithm/dichotomy/">阅读剩下更多</a>
+            </p>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/面试题/">面试题</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="https://vvvvvic.github.io/2019/06/30/eventLoop/eventLoop/">
+    		[object Object]
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Lemon 发表于
+        <time datetime="2019-06-30T03:21:46.195Z">2019-06-30</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <h2 id="一道面试题"><a href="#一道面试题" class="headerlink" title="一道面试题"></a>一道面试题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(function() &#123;</span><br><span class="line">  console.log(1);</span><br><span class="line">&#125;, 0)</span><br><span class="line"></span><br><span class="line">new Promise(function(resolve,reject) &#123;</span><br><span class="line">  resolve(2)</span><br><span class="line">  console.log(0)</span><br><span class="line">&#125;).then(console.log)</span><br><span class="line"></span><br><span class="line">console.log(3);</span><br></pre></td></tr></table></figure>
+            
+            <p class="more">
+                <a href="https://vvvvvic.github.io/2019/06/30/eventLoop/eventLoop/">阅读剩下更多</a>
+            </p>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+            <a href="javascript: void(0);" class="cat">未分类</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="https://vvvvvic.github.io/2019/06/30/formSubmissionRules/formSubmissionRules/">
+    		表单提交规则
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2019-06-29T16:00:00.000Z">2019-06-30</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <h2 id="表单提交规则"><a href="#表单提交规则" class="headerlink" title="表单提交规则"></a>表单提交规则</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-form</span> <span class="attr">:model</span>=<span class="string">"formInline"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-form-item</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"handleClick"</span>&gt;</span>Button<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">el-form-item</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-form-item</span> <span class="attr">label</span>=<span class="string">"审批人"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-input</span> <span class="attr">v-model</span>=<span class="string">"formInline.user"</span> <span class="attr">placeholder</span>=<span class="string">"审批人"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-input</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">el-form-item</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">handleClick() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">123</span>)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+            
+            <p class="more">
+                <a href="https://vvvvvic.github.io/2019/06/30/formSubmissionRules/formSubmissionRules/">阅读剩下更多</a>
+            </p>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+            <a href="javascript: void(0);" class="cat">未分类</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="https://vvvvvic.github.io/2018/10/18/Debounce-And-Throttle/Debounce-And-Throttle/">
+    		函数防抖与函数节流
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2018-10-17T16:00:00.000Z">2018-10-18</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <h3 id="函数防抖-debounce"><a href="#函数防抖-debounce" class="headerlink" title="函数防抖  debounce"></a>函数防抖  debounce</h3><p>场景：淘宝首页，侧边栏快速划过不显示内容，即从 【女装】快速无间隙滑动到【鲜花】，两模块中间的内容不显示。停到某一个侧边栏才显示侧边栏内容。</p>
+            
+            <p class="more">
+                <a href="https://vvvvvic.github.io/2018/10/18/Debounce-And-Throttle/Debounce-And-Throttle/">阅读剩下更多</a>
+            </p>
+        </div>
+    </div>
+</article>
+
+    
+
+    
+    <nav class="page-navigator">
+        <span class="page-number current">1</span>
+    </nav>
+    
+
+
             </div>
 
-          </li>
-        
-          <li class="clearfix">
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/Web技术/">Web技术</a>
+        <span class="badge">(0)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Web技术/生活琐事/">生活琐事</a>
+        <span class="badge">(0)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/面试题/">面试题</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/算法/">算法</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+</ul>
+    </section>
 
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2019/06/30/eventLoop/eventLoop/">事件循环</a></h6>
-              <span>June 30, 2019</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2018/10/18/Debounce-And-Throttle/Debounce-And-Throttle/">函数防抖与函数节流</a></h6>
-              <span>October 18, 2018</span>
-            </div>
-
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
   
+    <a class="tag-item" href="/tags/JS移位运算符/" title="JS移位运算符">JS移位运算符 (1)</a>
+  
+    <a class="tag-item" href="/tags/in-运算符/" title="in 运算符">in 运算符 (1)</a>
+  
+</div>
+    </section>
     
 
-  
     
 
-  
     
-  
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">1</span></li></ul>
-    </div>
-  </div>
-
-
-  
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
 </aside>
-        
-      </div>
-
+<!-- / 侧栏部分 -->
     </div>
-    <!-- <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-    <a href="/categories" class="mobile-nav-link">Categories</a>
-  
-    <a href="/tags" class="mobile-nav-link">Tags</a>
-  
-    <a href="/about" class="mobile-nav-link">About</a>
-  
-    <a href="/atom.xml" class="mobile-nav-link">rss</a>
-  
-</nav> -->
-    <footer id="footer" class="site-footer">
-  
 
-  <div class="clearfix container">
-      <div class="site-info">
-	      &copy; 2019 Lemon Blog All Rights Reserved.
-        
-            <span id="busuanzi_container_site_uv">
-              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
-              本站总访问量<span id="busuanzi_value_site_pv"></span>次
-            </span>
-          
-      </div>
-      <div class="site-credit">
-        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
-      </div>
-  </div>
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
 </footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
 
-
-<!-- min height -->
-
-<script>
-    var wrapdiv = document.getElementById("wrap");
-    var contentdiv = document.getElementById("content");
-
-    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
-    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
-
-
-    <!-- headerblur min height -->
-    
-    
-</script>
-    
-<div style="display: none;">
-  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
-</div>
-
-<!-- mathjax config similar to math.stackexchange -->
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
-</script>
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-    });
-</script>
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-<script src="/js/bootstrap.js"></script>
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
 <script src="/js/main.js"></script>
-
-
-
-
-
-
-
-  <div style="display: none;">
-    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
-  </div>
-
-
-
-	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-	</script>
-
-
-
-
-
-
-  </div>
-
-  <a id="rocket" href="#top" class=""></a>
-  <script type="text/javascript" src="/js/totop.js" async=""></script>
 </body>
 </html>
