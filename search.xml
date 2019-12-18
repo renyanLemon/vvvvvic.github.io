@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>求最大路径</title>
+      <link href="/2019/12/18/algorithm/dynamic-programming/"/>
+      <url>/2019/12/18/algorithm/dynamic-programming/</url>
+      
+        <content type="html"><![CDATA[<h3 id="经典的动态规划数字三角形问题"><a href="#经典的动态规划数字三角形问题" class="headerlink" title="经典的动态规划数字三角形问题"></a>经典的动态规划数字三角形问题</h3><p><img src="../../images/dynamic-programming.png" alt=""></p><p>在上面的数字三角形中寻找一条从顶部到底部的路径，使得路径上所经过的数字之和最大。路径上的每一步都只能往左下或者右下走。</p><ul><li>只要求出这个最大和即可，不必给出具体路径。</li><li>三角形的行数大于1小于等于100，数字为0-99</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 动态规划 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>有效的括号</title>
       <link href="/2019/12/13/algorithm/valid-parentheses/"/>
       <url>/2019/12/13/algorithm/valid-parentheses/</url>
