@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
     <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
     
-    <title>找到具有最大和的连续子数组 | 柠檬小小</title>
+    <title>JavaScript sort() 方法 | 柠檬小小</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
     <meta name="keywords" content="柠檬小小, 前端, Web, 前端开发" >
     <meta name="description" content="柠檬小小个人前端小站" >
@@ -56,19 +56,19 @@
         <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
         <ul class="menu hidden" id="JELON__menu">
             
-            <li rel="/2019/12/18/algorithm/dynamic-programming/index.html" class="item ">
+            <li rel="/2019/12/20/array-method/sort/index.html" class="item ">
                 <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
             </li>
             
-            <li rel="/2019/12/18/algorithm/dynamic-programming/index.html" class="item ">
+            <li rel="/2019/12/20/array-method/sort/index.html" class="item ">
                 <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
             </li>
             
-            <li rel="/2019/12/18/algorithm/dynamic-programming/index.html" class="item ">
+            <li rel="/2019/12/20/array-method/sort/index.html" class="item ">
                 <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
             </li>
             
-            <li rel="/2019/12/18/algorithm/dynamic-programming/index.html" class="item ">
+            <li rel="/2019/12/20/array-method/sort/index.html" class="item ">
                 <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
             </li>
             
@@ -117,47 +117,49 @@
 <!-- 文章 -->
 <article class="post article">
     <header class="text-center">
-        <h3 class="post-title"><span>找到具有最大和的连续子数组</span></h3>
+        <h3 class="post-title"><span>JavaScript sort() 方法</span></h3>
     </header>
     <p class="post-meta text-center">
         Lemon 发表于
-        <time datetime="2019-12-18T08:02:48.189Z">2019-12-18</time>
+        <time datetime="2019-12-20T07:03:31.596Z">2019-12-20</time>
     </p>
     <div class="post-content">
-        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。</p>
+        <h5 id="sort-方法用于对数组的元素进行排序。"><a href="#sort-方法用于对数组的元素进行排序。" class="headerlink" title="sort() 方法用于对数组的元素进行排序。"></a>sort() 方法用于对数组的元素进行排序。</h5><ul>
+<li>arrayObject.sort(sortby)</li>
+</ul>
 <a id="more"></a>
-<h6 id="示例"><a href="#示例" class="headerlink" title="示例:"></a>示例:</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: [-2,1,-3,4,-1,2,1,-5,4],</span><br><span class="line">输出: 6</span><br><span class="line">解释: 连续子数组 [4,-1,2,1] 的和最大，为 6。</span><br></pre></td></tr></table></figure>
-<h6 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路:"></a>解题思路:</h6><p>通常我们遍历子串或者子序列有三种遍历方式：[a, b , c, d , e]</p>
+<h5 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h5><ul>
+<li>sortby   可选。规定排序顺序。必须是函数。</li>
+</ul>
+<h5 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h5><ul>
+<li>对数组的引用。在原数组上进行排序，不生成副本。</li>
+</ul>
 <ul>
-<li>以某个节点为开头的所有子序列: 如 [a]，[a, b]，[ a, b, c] … 再从以 b 为开头的子序列开始遍历 [b] [b, c]。</li>
-<li>根据子序列的长度为标杆，如先遍历出子序列长度为 1 的子序列，在遍历出长度为 2 的 等等。</li>
-<li>以子序列的结束节点为基准，先遍历出以某个节点为结束的所有子序列，因为每个节点都可能会是子序列的结束节点，因此要遍历下整个序列，如: 以 b 为结束点的所有子序列: [a , b] [b] 以 c 为结束点的所有子序列: [a, b, c] [b, c] [ c ]。</li>
+<li><p>如果调用该方法时没有使用参数，将按字母顺序对数组中的元素进行排序，说得更精确点，是按照字符编码的顺序进行排序。要实现这一点，首先应把数组的元素都转换成字符串（如有必要），以便进行比较。</p>
+</li>
+<li><p>如果想按照其他标准进行排序，就需要提供比较函数，该函数要比较两个值，然后返回一个用于说明这两个值的相对顺序的数字。比较函数应该具有两个参数 a 和 b，其返回值如下：</p>
+</li>
 </ul>
-<h6 id="Kadane算法"><a href="#Kadane算法" class="headerlink" title="Kadane算法:"></a>Kadane算法:</h6><ul>
-<li>Kadane算法扫描一次整个数列的所有数值，</li>
-<li>在每一个扫描点计算以该点数值为结束点的子数列的最大和（正数和）。</li>
-<li>该子数列由两部分组成：以前一个位置为结束点的最大子数列、该位置的数值。</li>
-<li>因为该算法用到了“最佳子结构”（以每个位置为终点的最大子数列都是基于其前一位置的最大子数列计算得出,</li>
-<li>该算法可看成动态规划的一个例子。</li>
-<li>状态转移方程：sum[i] = max{sum[i-1]+a[i],a[i]}   </li>
-<li>其中(sum[i]记录以a[i]为子序列末端的最大序子列连续和)</li>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">若 a 小于 b，在排序后的数组中 a 应该出现在 b 之前，则返回一个小于 0 的值。</span><br><span class="line">若 a 等于 b，则返回 0。</span><br><span class="line">若 a 大于 b，则返回一个大于 0 的值。</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>例子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function sortNumber(a,b)&#123;</span><br><span class="line">  return a - b</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">var arr = new Array(6)</span><br><span class="line">arr[0] = &quot;10&quot;</span><br><span class="line">arr[1] = &quot;5&quot;</span><br><span class="line">arr[2] = &quot;40&quot;</span><br><span class="line">arr[3] = &quot;25&quot;</span><br><span class="line">arr[4] = &quot;1000&quot;</span><br><span class="line">arr[5] = &quot;1&quot;</span><br><span class="line"></span><br><span class="line">document.write(arr.sort(sortNumber))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1,5,10,25,40,1000</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h6 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">function  maxSubArray2  ( nums ) &#123;</span><br><span class="line">    if (!nums.length) &#123;</span><br><span class="line">        return;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    let max_ending_here = nums[0];</span><br><span class="line">    let max_so_far = nums[0];</span><br><span class="line"></span><br><span class="line">    for (let i = 1; i &lt; nums.length; i ++ ) &#123;</span><br><span class="line">        max_ending_here = Math.max ( nums[i], max_ending_here + nums[i]);</span><br><span class="line">        max_so_far = Math.max ( max_so_far, max_ending_here);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    return max_so_far;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>或</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var maxSubArray = function(nums) &#123;</span><br><span class="line">    let ans = nums[0];</span><br><span class="line">    let sum = 0;</span><br><span class="line">    for(let num of nums) &#123;</span><br><span class="line">        if(sum + num &gt; num )&#123;</span><br><span class="line">            sum = sum + num;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            sum = num;</span><br><span class="line">        &#125;</span><br><span class="line">        ans = Math.max(ans, sum);</span><br><span class="line">    &#125;;</span><br><span class="line">    return ans;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><p>使用动态规划方法解题有较高的时间效率，关键在于它减少了很多不必要的计算和重复计算的部分</p>
-<p>链接：<a href="https://leetcode-cn.com/problems/maximum-subarray/solution/xiang-xi-jie-du-dong-tai-gui-hua-de-shi-xian-yi-li/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/maximum-subarray/solution/xiang-xi-jie-du-dong-tai-gui-hua-de-shi-xian-yi-li/</a><br>来源：力扣（LeetCode）</p>
 
     </div>
     <p class="post-meta">
         <span class="post-cat">分类：
-            <a class="cat-link" href="/categories/算法/">算法</a>
+            <a class="cat-link" href="/categories/数组方法/">数组方法</a>
         </span>
         <span class="post-tags">
             标签：
             
     
-        <a href="/tags/动态规划/" title="动态规划">动态规划</a>
+        <a href="/tags/数组方法/" title="数组方法">数组方法</a>
     
 
         </span>
@@ -183,20 +185,16 @@
     
     <span class="prev fl">
         上一篇<br >
-        <a href="/2019/12/20/array-method/sort/">
-            
-                JavaScript sort() 方法
-            
-        </a>
+        <a href="javascript: void(0);">没有上一篇了</a>
     </span>
     
 
     
     <span class="next fr">
         下一篇<br >
-        <a href="/2019/12/13/algorithm/valid-parentheses/">
+        <a href="/2019/12/18/algorithm/dynamic-programming/">
             
-                有效的括号
+                找到具有最大和的连续子数组
             
         </a>
     </span>
@@ -273,7 +271,7 @@
   <script>
   JELON.Comment({
     container: 'comments',
-    label: 'algorithm/dynamic-programming' || '2019/12/18/algorithm/dynamic-programming/',
+    label: 'array-method/sort' || '2019/12/20/array-method/sort/',
     owner: 'your_github_id',
     repo: 'your_blog_comments',
     clientId: 'your_client_id',
