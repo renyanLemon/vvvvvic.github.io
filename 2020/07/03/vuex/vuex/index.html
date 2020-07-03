@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
     <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
     
-    <title>[object Object] | 柠檬小小</title>
+    <title>组件间异步传值 | 柠檬小小</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
     <meta name="keywords" content="柠檬小小, 前端, Web, 前端开发" >
     <meta name="description" content="柠檬小小个人前端小站" >
@@ -56,19 +56,19 @@
         <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
         <ul class="menu hidden" id="JELON__menu">
             
-            <li rel="/2019/06/30/eventLoop/eventLoop/index.html" class="item ">
+            <li rel="/2020/07/03/vuex/vuex/index.html" class="item ">
                 <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
             </li>
             
-            <li rel="/2019/06/30/eventLoop/eventLoop/index.html" class="item ">
+            <li rel="/2020/07/03/vuex/vuex/index.html" class="item ">
                 <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
             </li>
             
-            <li rel="/2019/06/30/eventLoop/eventLoop/index.html" class="item ">
+            <li rel="/2020/07/03/vuex/vuex/index.html" class="item ">
                 <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
             </li>
             
-            <li rel="/2019/06/30/eventLoop/eventLoop/index.html" class="item ">
+            <li rel="/2020/07/03/vuex/vuex/index.html" class="item ">
                 <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
             </li>
             
@@ -117,38 +117,34 @@
 <!-- 文章 -->
 <article class="post article">
     <header class="text-center">
-        <h3 class="post-title"><span>[object Object]</span></h3>
+        <h3 class="post-title"><span>组件间异步传值</span></h3>
     </header>
     <p class="post-meta text-center">
         Lemon 发表于
-        <time datetime="2019-06-30T03:21:46.195Z">2019-06-30</time>
+        <time datetime="2020-07-03T06:04:53.196Z">2020-07-03</time>
     </p>
     <div class="post-content">
-        <h2 id="一道面试题"><a href="#一道面试题" class="headerlink" title="一道面试题"></a>一道面试题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(function() &#123;</span><br><span class="line">  console.log(1);</span><br><span class="line">&#125;, 0)</span><br><span class="line"></span><br><span class="line">new Promise(function(resolve,reject) &#123;</span><br><span class="line">  resolve(2)</span><br><span class="line">  console.log(0)</span><br><span class="line">&#125;).then(console.log)</span><br><span class="line"></span><br><span class="line">console.log(3);</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h3 id="控制台打印结果"><a href="#控制台打印结果" class="headerlink" title="控制台打印结果"></a>控制台打印结果</h3><p><img src="../../images/eventLoop.png" alt=""></p>
-<h3 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h3><ul>
-<li>JavaScript是单线程的语言</li>
-<li>Event Loop是javascript的执行机制</li>
+        <h3 id="使用vueX进行组件间异步传值"><a href="#使用vueX进行组件间异步传值" class="headerlink" title="使用vueX进行组件间异步传值"></a>使用vueX进行组件间异步传值</h3><ul>
+<li>问题：<br>A、B两个兄弟组件，B组件需要A组件ajax请求回来的数据来渲染页面。<br>B组件在A组件异步完成之前就已经完成渲染了，导致B组件的数据没有来得及渲染。</li>
 </ul>
-<p>js的单线程（single threaded）和异步（asynchronous）:<br>  单线程：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">new Promise(function(resolve,reject) &#123;</span><br><span class="line">  console.log(0)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">console.log(3);</span><br></pre></td></tr></table></figure></p>
-<p>  进入队列：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(function() &#123;</span><br><span class="line">  console.log(1);</span><br><span class="line">&#125;, 0)</span><br><span class="line"></span><br><span class="line">.then(console.log)</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>new Promise() 是同步任务<br>.then() 是异步任务</p>
-</blockquote>
-<p>微任务与宏任务：<br>  微任务：macro-task<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.then(console.log)</span><br></pre></td></tr></table></figure></p>
-<p>  宏任务：micro-task<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(function() &#123;</span><br><span class="line">  console.log(1);</span><br><span class="line">&#125;, 0)</span><br></pre></td></tr></table></figure></p>
-<h3 id="其他的微任务和宏任务："><a href="#其他的微任务和宏任务：" class="headerlink" title="其他的微任务和宏任务："></a>其他的微任务和宏任务：</h3><p>  微任务：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- Promise</span><br><span class="line">- process.nextTick</span><br></pre></td></tr></table></figure></p>
-<p>  宏任务：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- setTimeout</span><br><span class="line">- setInterval</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h3 id="解决-【computed】"><a href="#解决-【computed】" class="headerlink" title="解决  【computed】"></a>解决  【computed】</h3><h6 id="leftMenu-vue"><a href="#leftMenu-vue" class="headerlink" title="leftMenu.vue"></a>leftMenu.vue</h6>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- menuAry  是ajax请求回来的数据 --&gt;</span><br><span class="line"></span><br><span class="line">this.$store.commit(&apos;setLeftMenuAry&apos;, this.menuAry)</span><br></pre></td></tr></table></figure>
+<h6 id="store-js"><a href="#store-js" class="headerlink" title="store.js"></a>store.js</h6>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setLeftMenuAry(state,val) &#123;</span><br><span class="line">  state.leftMenuAry = val</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="home-vue"><a href="#home-vue" class="headerlink" title="home.vue"></a>home.vue</h6>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- leftMenuAry  是渲染页面的数据 --&gt;</span><br><span class="line"></span><br><span class="line">computed: &#123;</span><br><span class="line">  leftMenuAry() &#123;</span><br><span class="line">    let leftMenuAry = this.$store.state.leftMenuAry</span><br><span class="line">    return leftMenuAry</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>data 中的内容只会在 created 钩子触发前初始化一次。data 中内容依赖变更时，data 属性不会变更（它的设计目标就是保存组件的局部状态数据而已）。<br>而 computed 则是通过【依赖追踪】实现的，在 computed 求值时引用的 Vue 变量变化时，会触发对 computed 的重新计算。所以可以使用 computed 去引用 Vuex 状态变量，从而使得依赖追踪生效。</p>
 
     </div>
     <p class="post-meta">
         <span class="post-cat">分类：
-            <a class="cat-link" href="/categories/面试题/">面试题</a>
+            <a class="cat-link" href="/categories/vueX/">vueX</a>
         </span>
         <span class="post-tags">
             标签：
             
+    
+        <a href="/tags/vueX/" title="vueX">vueX</a>
+    
+
         </span>
     </p>
 </article>
@@ -172,20 +168,16 @@
     
     <span class="prev fl">
         上一篇<br >
-        <a href="/2019/12/11/algorithm/dichotomy/">
-            
-                二分法 与 JS移位运算符
-            
-        </a>
+        <a href="javascript: void(0);">没有上一篇了</a>
     </span>
     
 
     
     <span class="next fr">
         下一篇<br >
-        <a href="/2019/06/30/formSubmissionRules/formSubmissionRules/">
+        <a href="/2019/12/20/array-method/sort/">
             
-                表单提交规则
+                JavaScript sort() 方法
             
         </a>
     </span>
@@ -262,7 +254,7 @@
   <script>
   JELON.Comment({
     container: 'comments',
-    label: 'eventLoop/eventLoop' || '2019/06/30/eventLoop/eventLoop/',
+    label: 'vuex/vuex' || '2020/07/03/vuex/vuex/',
     owner: 'your_github_id',
     repo: 'your_blog_comments',
     clientId: 'your_client_id',

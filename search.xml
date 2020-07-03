@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>组件间异步传值</title>
+      <link href="/2020/07/03/vuex/vuex/"/>
+      <url>/2020/07/03/vuex/vuex/</url>
+      
+        <content type="html"><![CDATA[<h3 id="使用vueX进行组件间异步传值"><a href="#使用vueX进行组件间异步传值" class="headerlink" title="使用vueX进行组件间异步传值"></a>使用vueX进行组件间异步传值</h3><ul><li>问题：<br>A、B两个兄弟组件，B组件需要A组件ajax请求回来的数据来渲染页面。<br>B组件在A组件异步完成之前就已经完成渲染了，导致B组件的数据没有来得及渲染。</li></ul><a id="more"></a><h3 id="解决-【computed】"><a href="#解决-【computed】" class="headerlink" title="解决  【computed】"></a>解决  【computed】</h3><h6 id="leftMenu-vue"><a href="#leftMenu-vue" class="headerlink" title="leftMenu.vue"></a>leftMenu.vue</h6>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- menuAry  是ajax请求回来的数据 --&gt;</span><br><span class="line"></span><br><span class="line">this.$store.commit(&apos;setLeftMenuAry&apos;, this.menuAry)</span><br></pre></td></tr></table></figure><h6 id="store-js"><a href="#store-js" class="headerlink" title="store.js"></a>store.js</h6>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setLeftMenuAry(state,val) &#123;</span><br><span class="line">  state.leftMenuAry = val</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h6 id="home-vue"><a href="#home-vue" class="headerlink" title="home.vue"></a>home.vue</h6>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- leftMenuAry  是渲染页面的数据 --&gt;</span><br><span class="line"></span><br><span class="line">computed: &#123;</span><br><span class="line">  leftMenuAry() &#123;</span><br><span class="line">    let leftMenuAry = this.$store.state.leftMenuAry</span><br><span class="line">    return leftMenuAry</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>data 中的内容只会在 created 钩子触发前初始化一次。data 中内容依赖变更时，data 属性不会变更（它的设计目标就是保存组件的局部状态数据而已）。<br>而 computed 则是通过【依赖追踪】实现的，在 computed 求值时引用的 Vue 变量变化时，会触发对 computed 的重新计算。所以可以使用 computed 去引用 Vuex 状态变量，从而使得依赖追踪生效。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> vueX </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vueX </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JavaScript sort() 方法</title>
       <link href="/2019/12/20/array-method/sort/"/>
       <url>/2019/12/20/array-method/sort/</url>
