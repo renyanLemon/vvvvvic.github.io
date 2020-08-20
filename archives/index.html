@@ -7,7 +7,7 @@
     
     <title>文章归档 | 柠檬小小</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
-    <meta name="keywords" content="柠檬小小, 前端, Web, 前端开发" >
+    <meta name="keywords" content="前端, Web, 前端开发" >
     <meta name="description" content="柠檬小小个人前端小站" >
 
     
@@ -57,11 +57,11 @@
         <ul class="menu hidden" id="JELON__menu">
             
             <li rel="/archives/index.html" class="item ">
-                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+                <a href="/" title="文章" class="icon-home">&nbsp;文章</a>
             </li>
             
             <li rel="/archives/index.html" class="item ">
-                <a href="/about/" title="文章" class="icon-about">&nbsp;文章</a>
+                <a href="/about/" title="分类" class="icon-about">&nbsp;分类</a>
             </li>
             
             <li rel="/archives/index.html" class="item ">
@@ -119,6 +119,84 @@
             
         </strong>
     </h3>
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/node/">node</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="https://vvvvvic.github.io/2020/08/20/node/dependencies/">
+    		dependencies与devDependencies的区别
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Lemon 发表于
+        <time datetime="2020-08-20T07:33:39.000Z">2020-08-20</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>npm install在安装node模块时，有两种命令参数可以把它们的信息写入package.json文件：</p>
+            
+            <p class="more">
+                <a href="https://vvvvvic.github.io/2020/08/20/node/dependencies/">阅读剩下更多</a>
+            </p>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/数组方法/">数组方法</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="https://vvvvvic.github.io/2020/08/17/array-method/reduce/">
+    		JavaScript reduce() 方法
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Lemon 发表于
+        <time datetime="2020-08-17T07:42:48.293Z">2020-08-17</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <h5 id="reduce-方法用于对数组的元素进行排序。"><a href="#reduce-方法用于对数组的元素进行排序。" class="headerlink" title="reduce() 方法用于对数组的元素进行排序。"></a>reduce() 方法用于对数组的元素进行排序。</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">total, currentValue, currentIndex, arr</span>), <span class="title">initialValue</span>)</span></span><br></pre></td></tr></table></figure>
+            
+            <p class="more">
+                <a href="https://vvvvvic.github.io/2020/08/17/array-method/reduce/">阅读剩下更多</a>
+            </p>
+        </div>
+    </div>
+</article>
+
     
         <!-- 文章列表 item -->
 <article class="post">
@@ -445,85 +523,6 @@
 </article>
 
     
-        <!-- 文章列表 item -->
-<article class="post">
-    <header>
-        <!-- 标签这有且只能显示一个 -->
-        
-        <a class="cat-link" href="/categories/面试题/">面试题</a>
-        
-        <!-- 文章标题 -->
-        
-    <h3 class="post-title">
-    	<a href="https://vvvvvic.github.io/2019/06/30/eventLoop/eventLoop/">
-    		[object Object]
-    	</a>
-    </h3>
-
-    </header>
-    <p class="post-meta">
-        Lemon 发表于
-        <time datetime="2019-06-30T03:21:46.195Z">2019-06-30</time>
-        &nbsp;&nbsp;
-        <span class="post-tags">
-            标签：
-            
-        </span>
-    </p>
-
-    <div class="post-content">
-        <div class="post-excerpt">
-            
-                <h2 id="一道面试题"><a href="#一道面试题" class="headerlink" title="一道面试题"></a>一道面试题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(function() &#123;</span><br><span class="line">  console.log(1);</span><br><span class="line">&#125;, 0)</span><br><span class="line"></span><br><span class="line">new Promise(function(resolve,reject) &#123;</span><br><span class="line">  resolve(2)</span><br><span class="line">  console.log(0)</span><br><span class="line">&#125;).then(console.log)</span><br><span class="line"></span><br><span class="line">console.log(3);</span><br></pre></td></tr></table></figure>
-            
-            <p class="more">
-                <a href="https://vvvvvic.github.io/2019/06/30/eventLoop/eventLoop/">阅读剩下更多</a>
-            </p>
-        </div>
-    </div>
-</article>
-
-    
-        <!-- 文章列表 item -->
-<article class="post">
-    <header>
-        <!-- 标签这有且只能显示一个 -->
-        
-            <a href="javascript: void(0);" class="cat">未分类</a>
-        
-        <!-- 文章标题 -->
-        
-    <h3 class="post-title">
-    	<a href="https://vvvvvic.github.io/2019/06/30/formSubmissionRules/formSubmissionRules/">
-    		表单提交规则
-    	</a>
-    </h3>
-
-    </header>
-    <p class="post-meta">
-        Jelon 发表于
-        <time datetime="2019-06-29T16:00:00.000Z">2019-06-30</time>
-        &nbsp;&nbsp;
-        <span class="post-tags">
-            标签：
-            
-        </span>
-    </p>
-
-    <div class="post-content">
-        <div class="post-excerpt">
-            
-                <h2 id="表单提交规则"><a href="#表单提交规则" class="headerlink" title="表单提交规则"></a>表单提交规则</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-form</span> <span class="attr">:model</span>=<span class="string">"formInline"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-form-item</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"handleClick"</span>&gt;</span>Button<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">el-form-item</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-form-item</span> <span class="attr">label</span>=<span class="string">"审批人"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-input</span> <span class="attr">v-model</span>=<span class="string">"formInline.user"</span> <span class="attr">placeholder</span>=<span class="string">"审批人"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-input</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">el-form-item</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-form</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">handleClick() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">123</span>)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-            
-            <p class="more">
-                <a href="https://vvvvvic.github.io/2019/06/30/formSubmissionRules/formSubmissionRules/">阅读剩下更多</a>
-            </p>
-        </div>
-    </div>
-</article>
-
-    
 
     
     <nav class="page-navigator">
@@ -549,6 +548,16 @@
     
     <li>
         <a href="/categories/数组方法/">数组方法</a>
+        <span class="badge">(2)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/面试题/">面试题</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/导出/">导出</a>
         <span class="badge">(1)</span>
     </li>
     
@@ -563,39 +572,12 @@
     </li>
     
     <li>
-        <a href="/categories/面试题/">面试题</a>
+        <a href="/categories/node/">node</a>
         <span class="badge">(1)</span>
-    </li>
-    
-    <li>
-        <a href="/categories/导出/">导出</a>
-        <span class="badge">(1)</span>
-    </li>
-    
-    <li>
-        <a href="/categories/导出-blob/">导出 blob</a>
-        <span class="badge">(0)</span>
     </li>
     
 </ul>
     </section>
-
-    
-
-    
-    <!-- 友情链接 -->
-    <section class="widget">
-        <h3 class="widget-hd"><strong>友情链接</strong></h3>
-        <!-- 文章分类 -->
-<ul class="widget-bd">
-    
-        <li>
-            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
-        </li>
-    
-</ul>
-    </section>
-    
 </aside>
 <!-- / 侧栏部分 -->
 
@@ -608,7 +590,7 @@
         2016-2020
     
 
-    <a href="/">Jelon Loves You</a>
+    <a href="/">Loves You</a>
 </footer>
 <div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
 
