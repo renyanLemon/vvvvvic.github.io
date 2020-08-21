@@ -124,7 +124,10 @@
 <li>问题：<br>不调取后端接口下载文件</li>
 </ul>
 <a id="more"></a>
-<h3 id="解决-将文件放在public目录下"><a href="#解决-将文件放在public目录下" class="headerlink" title="解决  将文件放在public目录下"></a>解决  将文件放在public目录下</h3><p><img src="../../images/dowmloadFile.jpeg" alt="avatar"></p>
+<h3 id="解决-将文件放在public目录下"><a href="#解决-将文件放在public目录下" class="headerlink" title="解决  将文件放在public目录下"></a>解决  将文件放在public目录下</h3><p>静态资源可以通过两种方式进行处理：</p>
+<p>在 JavaScript 被导入或在 template/CSS 中通过相对路径被引用。这类引用会被 webpack 处理。</p>
+<p>放置在 public 目录下或通过绝对路径被引用。这类资源将会直接被拷贝，而不会经过 webpack 的处理。</p>
+<p><img src="/.io//dowmloadFile.jpeg" alt="avatar"></p>
 <p>在所需要下载的页面，用 a 标签 download 属性 进行下载</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;/员工批量导入.xlsx&quot; download&gt;下载模版&lt;/a&gt;</span><br></pre></td></tr></table></figure>
 <h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>download 属性规定被下载的超链接目标。</p>
@@ -271,6 +274,11 @@
 <ul class="widget-bd">
     
     <li>
+        <a href="/categories/vue/">vue</a>
+        <span class="badge">(2)</span>
+    </li>
+    
+    <li>
         <a href="/categories/算法/">算法</a>
         <span class="badge">(4)</span>
     </li>
@@ -291,17 +299,12 @@
     </li>
     
     <li>
-        <a href="/categories/vue/">vue</a>
+        <a href="/categories/node/">node</a>
         <span class="badge">(1)</span>
     </li>
     
     <li>
         <a href="/categories/vueX/">vueX</a>
-        <span class="badge">(1)</span>
-    </li>
-    
-    <li>
-        <a href="/categories/node/">node</a>
         <span class="badge">(1)</span>
     </li>
     

@@ -125,6 +125,56 @@
     <header>
         <!-- 标签这有且只能显示一个 -->
         
+        <a class="cat-link" href="/categories/vue/">vue</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="https://vvvvvic.github.io/2020/08/21/aaa/">
+    		vue项目前端下载文件
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Lemon 发表于
+        <time datetime="2020-08-21T07:40:29.660Z">2020-08-21</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <ul>
+<li>问题：<br>不调取后端接口下载文件</li>
+</ul>
+<h3 id="解决-将文件放在public目录下"><a href="#解决-将文件放在public目录下" class="headerlink" title="解决  将文件放在public目录下"></a>解决  将文件放在public目录下</h3><p>静态资源可以通过两种方式进行处理：</p>
+<p>在 JavaScript 被导入或在 template/CSS 中通过相对路径被引用。这类引用会被 webpack 处理。</p>
+<p>放置在 public 目录下或通过绝对路径被引用。这类资源将会直接被拷贝，而不会经过 webpack 的处理。</p>
+<p><img src="/.io//dowmloadFile.jpeg" alt="public"></p>
+<p>在所需要下载的页面，用 a 标签 download 属性 进行下载</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;/员工批量导入.xlsx&quot; download&gt;下载模版&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>download 属性规定被下载的超链接目标。</p>
+<p>在 <a> 标签中必须设置 href 属性。</a></p>
+
+            
+            <p class="more">
+                <a href="https://vvvvvic.github.io/2020/08/21/aaa/">阅读剩下更多</a>
+            </p>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
         <a class="cat-link" href="/categories/node/">node</a>
         
         <!-- 文章标题 -->
@@ -217,6 +267,11 @@
 <ul class="widget-bd">
     
     <li>
+        <a href="/categories/vue/">vue</a>
+        <span class="badge">(2)</span>
+    </li>
+    
+    <li>
         <a href="/categories/算法/">算法</a>
         <span class="badge">(4)</span>
     </li>
@@ -237,17 +292,12 @@
     </li>
     
     <li>
-        <a href="/categories/vue/">vue</a>
+        <a href="/categories/node/">node</a>
         <span class="badge">(1)</span>
     </li>
     
     <li>
         <a href="/categories/vueX/">vueX</a>
-        <span class="badge">(1)</span>
-    </li>
-    
-    <li>
-        <a href="/categories/node/">node</a>
         <span class="badge">(1)</span>
     </li>
     
